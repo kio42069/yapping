@@ -5,15 +5,11 @@ const Home = () => {
   return (
     <div className="home-page">
       <div className="welcome-section">
-        <h2>👋 sup, welcome to my corner</h2>
+        <h2>HIIIIIII</h2>
         <div className="intro-text">
           <p>
             so yeah, i decided to make a blog instead of posting stories on instagram or whatever. 
             mainly because i'm tired of ai slop, ads, and bot accounts everywhere.
-          </p>
-          <p>
-            this is where i'll be dumping my thoughts, rants, and random stuff that my brain cooks up. 
-            no 24-hour time limit, no algorithm bs, just pure unfiltered content.
           </p>
         </div>
       </div>
