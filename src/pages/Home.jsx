@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Subscribe from '../components/Subscribe'
+import { getRecentBlogPosts } from '../utils/blogUtils'
 
 const Home = () => {
+  const [recentPosts, setRecentPosts] = useState([])
+  const [loading, setLoading] = useState(true)
+  
+  useEffect(() => {
+    const loadRecentPosts = async () => {
+      try {
+        const posts = await getRecentBlogPosts(3)
+        setRecentPosts(posts)
+      } catch (error) {
+        console.error('Error loading recent posts:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    
+    loadRecentPosts()
+  }, [])
+  
   return (
     <div className="home-page">
       <div className="welcome-section">
@@ -33,20 +53,43 @@ const Home = () => {
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       </div>
       
-      <div className="updates-section">
-        <h3>📋 recent updates</h3>
-        <div className="update-item">
-          <span className="update-date">2025-06-26:</span> 
-          posted "Hello bacchon" - explained why i'm doing this blog thing
+      <div className="recent-posts-section">
+        <h3>� recent posts</h3>
+        {loading ? (
+          <p style={{ textAlign: 'center', color: '#666' }}>loading recent posts...</p>
+        ) : recentPosts.length === 0 ? (
+          <p style={{ textAlign: 'center', color: '#666' }}>no posts yet...</p>
+        ) : (
+          <div className="blog-posts">
+            {recentPosts.map((post) => (
+              <article key={post.slug} className="blog-post-card">
+                <h4 className="blog-post-title">
+                  <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    {post.title}
+                  </Link>
+                </h4>
+                <div className="blog-post-date">
+                  {post.date}
+                </div>
+                <div className="blog-post-excerpt">
+                  {post.excerpt}
+                </div>
+                <Link to={`/blog/${post.slug}`} className="read-more">
+                  read more →
+                </Link>
+              </article>
+            ))}
+          </div>
+        )}
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          <Link to="/blog" className="read-more" style={{ fontSize: '1.1rem' }}>
+            view all posts →
+          </Link>
         </div>
-        <div className="update-item">
-          <span className="update-date">2025-06-25:</span> 
-          started working on that tracking rant (still not finished lol)
-        </div>
-        <div className="update-item">
-          <span className="update-date">2025-06-25:</span> 
-          set up this whole blog thing - pretty proud of myself ngl
-        </div>
+      </div>
+      
+      <div className="decorative-divider">
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       </div>
       
       <Subscribe />
