@@ -1,6 +1,6 @@
 ---
-title: "on why i hate tracking"
-date: "2025-06-25"
+title: "pls work"
+date: "2025-06-27"
 tags: ["rant"]
 excerpt: "A rant about tracking and privacy (content coming soon)"
 ---
