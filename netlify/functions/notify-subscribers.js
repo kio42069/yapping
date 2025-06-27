@@ -27,16 +27,22 @@ function getLatestBlogPost() {
   };
 }
 
-function getLastSentSlug() {
-  try {
-    return fs.readFileSync('/tmp/last-sent-post.txt', 'utf8').trim();
-  } catch {
-    return null;
-  }
+// --- Upstash Redis helpers ---
+async function getLastSentSlug() {
+  const url = `${process.env.UPSTASH_REDIS_REST_URL}/get/last-sent-post-slug`;
+  const res = await fetch(url, {
+    headers: { Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}` }
+  });
+  const data = await res.json();
+  return data.result || null;
 }
 
-function setLastSentSlug(slug) {
-  fs.writeFileSync('/tmp/last-sent-post.txt', slug, 'utf8');
+async function setLastSentSlug(slug) {
+  const url = `${process.env.UPSTASH_REDIS_REST_URL}/set/last-sent-post-slug/${slug}`;
+  await fetch(url, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}` }
+  });
 }
 
 exports.handler = async function(event, context) {
@@ -56,8 +62,8 @@ exports.handler = async function(event, context) {
     return { statusCode: 200, body: 'No blog posts found.' };
   }
 
-  // Check if this post was already sent
-  const lastSentSlug = getLastSentSlug();
+  // Check if this post was already sent (persisted across deploys)
+  const lastSentSlug = await getLastSentSlug();
   if (lastSentSlug === post.slug) {
     return { statusCode: 200, body: 'No new post to send.' };
   }
@@ -89,7 +95,7 @@ exports.handler = async function(event, context) {
 
   if (emails.length > 0) {
     await sgMail.sendMultiple(msg);
-    setLastSentSlug(post.slug);
+    await setLastSentSlug(post.slug);
   }
 
   return {
