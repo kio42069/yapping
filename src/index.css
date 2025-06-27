@@ -31,7 +31,9 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
   background: linear-gradient(135deg, var(--light-blue), var(--secondary-blue), var(--light-gray));
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
@@ -40,6 +42,7 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   min-height: 100vh;
+  font-size: 18px; /* Slightly larger for VT323 readability */
 }
 
 @keyframes gradientShift {
@@ -68,6 +71,36 @@ a {
 
 a:hover {
   color: var(--accent-blue);
+}
+
+/* VT323 Font Application */
+h1, h2, h3, h4, h5, h6, 
+input, button, textarea, select,
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Typography adjustments for VT323 */
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Button and input adjustments */
+button {
+  letter-spacing: 0.5px;
 }
 
 /* Utility Classes */

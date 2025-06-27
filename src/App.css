@@ -3,13 +3,16 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
   background: linear-gradient(45deg, #e6f3ff, #b3d4f7, #f7fafc);
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
   margin: 0;
   padding: 20px;
   line-height: 1.5;
+  font-size: 18px; /* Slightly larger for better readability with VT323 */
 }
 
 @keyframes gradientShift {
@@ -41,7 +44,8 @@ body {
   margin: 0;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-size: 2.5rem;
+  font-size: 3rem; /* Slightly larger for VT323 */
+  letter-spacing: 2px;
 }
 
 .header .subtitle {
@@ -192,6 +196,8 @@ body {
 .blog-post-title {
   color: #2c5282;
   margin-bottom: 10px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
 .blog-post-date {
@@ -326,6 +332,41 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-left: 5px;
+}
+
+/* VT323 Font Utility */
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Ensure all elements use VT323 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+}
+
+/* Specific adjustments for VT323 readability */
+.header h1 {
+  font-size: 3rem; /* Slightly larger for VT323 */
+  letter-spacing: 2px;
+}
+
+.blog-post-title {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Input and button font consistency */
+input, button, textarea {
+  font-family: "VT323", monospace;
+  font-size: 16px;
+}
+
+/* Code and pre elements should stay monospace but use VT323 */
+code, pre {
+  font-family: "VT323", monospace;
 }
 
 /* Responsive Music Player */
