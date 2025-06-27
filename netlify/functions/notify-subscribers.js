@@ -21,12 +21,16 @@ async function getLatestBlogPost() {
   const res = await fetch(apiUrl, { headers });
   const files = await res.json();
 
+  if (!Array.isArray(files)) {
+    console.error('GitHub API error:', files);
+    return null;
+  }
+
   // 2. Filter for .md files and sort by name (or add logic for commit date)
   const mdFiles = files.filter(f => f.name.endsWith('.md'));
   if (!mdFiles.length) return null;
 
   // 3. Get the latest file (by name, or you can use commit date for more accuracy)
-  // For now, sort by name descending (edit if you want by commit date)
   mdFiles.sort((a, b) => b.name.localeCompare(a.name));
   const latestFile = mdFiles[0];
 
@@ -35,7 +39,7 @@ async function getLatestBlogPost() {
   const content = await rawRes.text();
 
   // 5. Parse frontmatter and markdown
-  const { attributes, body } = fm(content);
+  const { attributes, body } = require('front-matter')(content);
   return {
     ...attributes,
     slug: latestFile.name.replace(/\\.md$/, ''),
