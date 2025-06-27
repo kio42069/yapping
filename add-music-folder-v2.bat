@@ -52,7 +52,15 @@ powershell -ExecutionPolicy Bypass -Command ^
     "    $count++; " ^
     "    Write-Host \"[$count] Adding: $($file.Name)\"; " ^
     "    try { " ^
-    "      $process = Start-Process -FilePath $scriptPath -ArgumentList \"\\\"$($file.FullName)\\\"\" -Wait -PassThru -WindowStyle Hidden; " ^
+    "      $psi = New-Object System.Diagnostics.ProcessStartInfo; " ^
+    "      $psi.FileName = $scriptPath; " ^
+    "      $psi.Arguments = '\"' + $file.FullName + '\"'; " ^
+    "      $psi.UseShellExecute = $false; " ^
+    "      $psi.CreateNoWindow = $true; " ^
+    "      $psi.RedirectStandardOutput = $true; " ^
+    "      $psi.RedirectStandardError = $true; " ^
+    "      $process = [System.Diagnostics.Process]::Start($psi); " ^
+    "      $process.WaitForExit(); " ^
     "      if ($process.ExitCode -eq 0) { " ^
     "        $success++; " ^
     "      } else { " ^
