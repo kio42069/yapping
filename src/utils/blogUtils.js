@@ -1,17 +1,14 @@
 import matter from 'gray-matter'
 
-// Get all blog post filenames
-const getBlogPostFilenames = () => {
-  // In a real Vite app, we need to import all markdown files
-  // This uses Vite's import.meta.glob feature
-  const modules = import.meta.glob('/blog/*.md', { query: '?raw', import: 'default' })
-  return Object.keys(modules)
-}
+// Use Vite's import.meta.glob to dynamically import all markdown files
+const postFiles = import.meta.glob('./blog/*.md', { eager: true, as: 'raw' })
 
 // Parse a markdown file and extract frontmatter
-const parseBlogPost = async (filename, content) => {
+const parseBlogPost = async (filepath, content) => {
   const { data, content: markdownContent } = matter(content)
-  const slug = filename.replace('/blog/', '').replace('.md', '')
+  
+  // Extract slug from filepath (e.g., "/blog/welcome-to-my-blog.md" -> "welcome-to-my-blog")
+  const slug = filepath.split('/').pop().replace('.md', '')
   
   return {
     slug,
@@ -27,17 +24,20 @@ const parseBlogPost = async (filename, content) => {
 // Get all blog posts
 export const getAllBlogPosts = async () => {
   try {
-    const modules = import.meta.glob('/blog/*.md', { query: '?raw', import: 'default' })
+    console.log('Loading blog posts...')
     const posts = []
     
-    for (const [filename, moduleLoader] of Object.entries(modules)) {
-      const content = await moduleLoader()
-      const post = await parseBlogPost(filename, content)
+    for (const [filepath, content] of Object.entries(postFiles)) {
+      console.log('Processing post:', filepath)
+      const post = await parseBlogPost(filepath, content)
+      console.log('Parsed post:', post)
       posts.push(post)
     }
     
     // Sort posts by date (newest first)
-    return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+    const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+    console.log('Final posts:', sortedPosts)
+    return sortedPosts
   } catch (error) {
     console.error('Error loading blog posts:', error)
     return []
@@ -47,14 +47,18 @@ export const getAllBlogPosts = async () => {
 // Get a single blog post by slug
 export const getBlogPost = async (slug) => {
   try {
-    const modules = import.meta.glob('/blog/*.md', { query: '?raw', import: 'default' })
-    const filename = `/blog/${slug}.md`
+    console.log('Looking for post:', slug)
     
-    if (modules[filename]) {
-      const content = await modules[filename]()
-      return await parseBlogPost(filename, content)
+    for (const [filepath, content] of Object.entries(postFiles)) {
+      const postSlug = filepath.split('/').pop().replace('.md', '')
+      
+      if (postSlug === slug) {
+        console.log('Found content for', slug)
+        return await parseBlogPost(filepath, content)
+      }
     }
     
+    console.log('No content found for slug:', slug)
     return null
   } catch (error) {
     console.error('Error loading blog post:', error)
