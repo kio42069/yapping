@@ -1,12 +1,25 @@
-# Blogger2
+# My Blog
 
-A static blog built with Vite + React, styled after https://0oxo0.neocities.org/.
+A no-bullshit blog built with Vite + React, because I'm tired of social media BS.
+
+## Why this exists
+- Because of the ai generated low quality slop
+- Because of the bombardment of personalised ads  
+- Because of the absolute shithousery of bot accounts
+
+Dead internet theory be looking pretty real rn.
+
+## What to expect
+1. Regular short thoughts / stories
+2. Tech/electronics/games posting
+3. Rants (definitely rants)
+4. Picture dumps (rarely, when I got enough content lol)
 
 ## Features
 - Blog posts in Markdown
 - Giscus comments integration
-- Email subscription (Mailchimp/Buttondown)
-- Ready for Netlify and GitHub Pages deployment
+- Email subscription 
+- Ready for Netlify deployment
 
 ## Getting Started
 
@@ -22,17 +35,23 @@ A static blog built with Vite + React, styled after https://0oxo0.neocities.org/
    ```sh
    npm run build
    ```
-4. Deploy the `dist` folder to Netlify.
+
+## Deployment
+- **Build command**: `npm run build`
+- **Publish directory**: `dist`
+- Configured for Netlify with proper routing
 
 ## Blog Posts
-- Add Markdown files to the `blog/` directory.
+Add Markdown files to the `blog/` directory.
 
 ## Comments
-- Comments are powered by Giscus. Configure your repo in `Giscus` component.
+Comments are powered by Giscus (GitHub Discussions).
 
 ## Subscriptions
-- Email subscription is handled via Mailchimp or Buttondown. Configure your form action in the `Subscribe` component.
+Email subscription ready for Mailchimp/Buttondown integration.
 
 ---
 
-This project is open source and ready for customization!
+Feel free to drop by sometimes to check out what's new.
+
+*bye bye*

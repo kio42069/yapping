@@ -55,7 +55,7 @@ const Home = () => {
       
       <Subscribe />
       
-      <div style={{ textAlign: 'center', marginTop: '40px', color: '#ff69b4' }}>
+      <div style={{ textAlign: 'center', marginTop: '40px', color: '#4a90e2' }}>
         <p>anyway, feel free to stick around and see what happens</p>
         <p><em>bye bye</em></p>
       </div>

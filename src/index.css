@@ -7,21 +7,21 @@
 
 /* Custom CSS Variables */
 :root {
-  --primary-pink: #ff69b4;
-  --secondary-pink: #ffb3e6;
-  --accent-pink: #ff1493;
-  --light-pink: #ffe6f2;
-  --primary-blue: #b3d9ff;
-  --accent-blue: #69b4ff;
-  --primary-orange: #ffb369;
-  --accent-orange: #ffccb3;
-  --primary-green: #69ff69;
-  --accent-green: #b3ffb3;
-  --text-dark: #333;
-  --text-light: #666;
+  --primary-blue: #4a90e2;
+  --secondary-blue: #b3d4f7;
+  --accent-blue: #2c5282;
+  --light-blue: #e6f3ff;
+  --primary-gray: #718096;
+  --secondary-gray: #a0aec0;
+  --accent-gray: #4a5568;
+  --light-gray: #f7fafc;
+  --primary-green: #48bb78;
+  --accent-green: #38a169;
+  --text-dark: #2d3748;
+  --text-light: #718096;
   --white: #ffffff;
   --shadow: rgba(0, 0, 0, 0.1);
-  --shadow-hover: rgba(0, 0, 0, 0.2);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
 }
 
 /* Base Styles */
@@ -32,9 +32,9 @@ html {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, var(--secondary-pink), var(--primary-blue), var(--accent-orange));
+  background: linear-gradient(135deg, var(--light-blue), var(--secondary-blue), var(--light-gray));
   background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  animation: gradientShift 20s ease infinite;
   margin: 0;
   padding: 20px;
   line-height: 1.6;
@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-bottom: 0.5em;
   line-height: 1.2;
+  color: var(--accent-blue);
 }
 
 p {
@@ -60,13 +61,13 @@ p {
 }
 
 a {
-  color: var(--accent-pink);
+  color: var(--primary-blue);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--primary-pink);
+  color: var(--accent-blue);
 }
 
 /* Utility Classes */

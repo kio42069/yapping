@@ -67,8 +67,8 @@ For now, just know that I really, really hate being tracked online. More thought
   
   if (loading) {
     return (
-      <div style={{ textAlign: 'center', padding: '50px', color: '#ff69b4' }}>
-        <p>loading post... ✨</p>
+      <div style={{ textAlign: 'center', padding: '50px', color: '#4a90e2' }}>
+        <p>loading post...</p>
       </div>
     )
   }
@@ -76,7 +76,7 @@ For now, just know that I really, really hate being tracked online. More thought
   if (!post) {
     return (
       <div style={{ textAlign: 'center', padding: '50px' }}>
-        <h2 style={{ color: '#ff69b4' }}>post not found (´･ω･`)</h2>
+        <h2 style={{ color: '#4a90e2' }}>post not found</h2>
         <p>sorry, that blog post doesn't exist!</p>
         <Link to="/blog" className="read-more">
           ← back to blog
@@ -88,10 +88,10 @@ For now, just know that I really, really hate being tracked online. More thought
   return (
     <div className="blog-post-page">
       <div className="blog-post-header" style={{ marginBottom: '30px' }}>
-        <Link to="/blog" style={{ color: '#ff69b4', textDecoration: 'none', fontSize: '0.9rem' }}>
+        <Link to="/blog" style={{ color: '#4a90e2', textDecoration: 'none', fontSize: '0.9rem' }}>
           ← back to all posts
         </Link>
-        <h1 style={{ color: '#ff1493', marginTop: '15px', marginBottom: '10px' }}>
+        <h1 style={{ color: '#2c5282', marginTop: '15px', marginBottom: '10px' }}>
           {post.title}
         </h1>
         <div style={{ color: '#666', marginBottom: '15px' }}>
@@ -103,8 +103,8 @@ For now, just know that I really, really hate being tracked online. More thought
               key={tag}
               style={{
                 display: 'inline-block',
-                background: '#ffb3e6',
-                color: '#ff1493',
+                background: '#b3d4f7',
+                color: '#2c5282',
                 padding: '4px 8px',
                 borderRadius: '10px',
                 fontSize: '0.8rem',
@@ -125,13 +125,13 @@ For now, just know that I really, really hate being tracked online. More thought
       }}>
         <ReactMarkdown
           components={{
-            h1: ({children}) => <h2 style={{ color: '#ff1493', marginTop: '40px', marginBottom: '20px' }}>{children}</h2>,
-            h2: ({children}) => <h3 style={{ color: '#ff69b4', marginTop: '30px', marginBottom: '15px' }}>{children}</h3>,
-            h3: ({children}) => <h4 style={{ color: '#ff69b4', marginTop: '25px', marginBottom: '10px' }}>{children}</h4>,
+            h1: ({children}) => <h2 style={{ color: '#2c5282', marginTop: '40px', marginBottom: '20px' }}>{children}</h2>,
+            h2: ({children}) => <h3 style={{ color: '#4a90e2', marginTop: '30px', marginBottom: '15px' }}>{children}</h3>,
+            h3: ({children}) => <h4 style={{ color: '#4a90e2', marginTop: '25px', marginBottom: '10px' }}>{children}</h4>,
             p: ({children}) => <p style={{ marginBottom: '15px' }}>{children}</p>,
             ul: ({children}) => <ul style={{ paddingLeft: '20px', marginBottom: '15px' }}>{children}</ul>,
-            strong: ({children}) => <strong style={{ color: '#ff1493' }}>{children}</strong>,
-            em: ({children}) => <em style={{ color: '#ff69b4' }}>{children}</em>
+            strong: ({children}) => <strong style={{ color: '#2c5282' }}>{children}</strong>,
+            em: ({children}) => <em style={{ color: '#4a90e2' }}>{children}</em>
           }}
         >
           {post.content}
@@ -139,7 +139,7 @@ For now, just know that I really, really hate being tracked online. More thought
       </article>
       
       <div className="decorative-divider">
-        ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
+        ──────────────────────────────────────────────────────
       </div>
       
       <Giscus />

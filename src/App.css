@@ -3,10 +3,10 @@
 }
 
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background: linear-gradient(45deg, #ffb3e6, #b3d9ff, #ffccb3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(45deg, #e6f3ff, #b3d4f7, #f7fafc);
   background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  animation: gradientShift 20s ease infinite;
   margin: 0;
   padding: 20px;
   line-height: 1.5;
@@ -22,18 +22,18 @@ body {
   max-width: 800px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.95);
-  border: 3px solid #ff69b4;
+  border: 3px solid #4a90e2;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.2);
   overflow: hidden;
 }
 
 /* Header Styles */
 .header {
-  background: linear-gradient(90deg, #ff69b4, #ffb3e6);
+  background: linear-gradient(90deg, #4a90e2, #b3d4f7);
   padding: 20px;
   text-align: center;
-  border-bottom: 3px solid #ff1493;
+  border-bottom: 3px solid #2c5282;
 }
 
 .header h1 {
@@ -41,26 +41,20 @@ body {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   font-size: 2.5rem;
-  animation: bounce 2s infinite alternate;
-}
-
-@keyframes bounce {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-10px); }
 }
 
 .header .subtitle {
-  color: #ffe6f2;
+  color: #e6f3ff;
   font-style: italic;
   margin-top: 10px;
 }
 
 /* Navigation Styles */
 .navigation {
-  background: #ffb3e6;
+  background: #b3d4f7;
   padding: 15px 0;
   text-align: center;
-  border-bottom: 2px solid #ff69b4;
+  border-bottom: 2px solid #4a90e2;
 }
 
 .nav-item {
@@ -68,24 +62,24 @@ body {
   margin: 0 15px;
   padding: 8px 16px;
   background: white;
-  border: 2px solid #ff69b4;
+  border: 2px solid #4a90e2;
   border-radius: 20px;
   text-decoration: none;
-  color: #ff1493;
+  color: #2c5282;
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item:hover {
-  background: #ff69b4;
+  background: #4a90e2;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
 }
 
 .nav-item.active {
-  background: #ff1493;
+  background: #2c5282;
   color: white;
 }
 
@@ -102,7 +96,7 @@ body {
 }
 
 .welcome-section h2 {
-  color: #ff1493;
+  color: #2c5282;
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -116,25 +110,25 @@ body {
 }
 
 .intro-text {
-  background: rgba(255, 179, 230, 0.2);
+  background: rgba(179, 212, 247, 0.2);
   padding: 20px;
   border-radius: 10px;
-  border: 2px dashed #ff69b4;
+  border: 2px dashed #4a90e2;
   margin: 20px 0;
   font-size: 1.1rem;
-  color: #333;
+  color: #2d3748;
 }
 
 .interests-section {
   margin: 30px 0;
   padding: 20px;
-  background: rgba(179, 217, 255, 0.2);
+  background: rgba(230, 243, 255, 0.3);
   border-radius: 10px;
-  border: 2px dashed #69b4ff;
+  border: 2px dashed #4a90e2;
 }
 
 .interests-section h3 {
-  color: #0066cc;
+  color: #2c5282;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -142,21 +136,21 @@ body {
 .decorative-divider {
   text-align: center;
   margin: 30px 0;
-  color: #ff69b4;
+  color: #4a90e2;
   font-size: 1.2rem;
 }
 
 /* Updates Section */
 .updates-section {
-  background: rgba(255, 204, 179, 0.2);
+  background: rgba(160, 174, 192, 0.2);
   padding: 20px;
   border-radius: 10px;
-  border: 2px dashed #ffb369;
+  border: 2px dashed #718096;
   margin: 30px 0;
 }
 
 .updates-section h3 {
-  color: #cc6600;
+  color: #4a5568;
   margin-bottom: 15px;
 }
 
@@ -165,12 +159,12 @@ body {
   padding: 8px;
   background: white;
   border-radius: 5px;
-  border-left: 4px solid #ffb369;
+  border-left: 4px solid #4a90e2;
 }
 
 .update-date {
   font-weight: bold;
-  color: #cc6600;
+  color: #2c5282;
 }
 
 /* Blog Styles */
@@ -182,7 +176,7 @@ body {
 
 .blog-post-card {
   background: white;
-  border: 2px solid #ff69b4;
+  border: 2px solid #4a90e2;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -195,18 +189,18 @@ body {
 }
 
 .blog-post-title {
-  color: #ff1493;
+  color: #2c5282;
   margin-bottom: 10px;
 }
 
 .blog-post-date {
-  color: #666;
+  color: #718096;
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
 
 .blog-post-excerpt {
-  color: #333;
+  color: #2d3748;
   line-height: 1.6;
 }
 
@@ -214,7 +208,7 @@ body {
   display: inline-block;
   margin-top: 15px;
   padding: 8px 16px;
-  background: #ff69b4;
+  background: #4a90e2;
   color: white;
   text-decoration: none;
   border-radius: 15px;
@@ -223,21 +217,21 @@ body {
 }
 
 .read-more:hover {
-  background: #ff1493;
+  background: #2c5282;
 }
 
 /* Subscribe Form */
 .subscribe-section {
-  background: rgba(179, 255, 179, 0.2);
+  background: rgba(72, 187, 120, 0.1);
   padding: 25px;
   border-radius: 15px;
-  border: 3px solid #69ff69;
+  border: 3px solid #48bb78;
   margin: 40px 0;
   text-align: center;
 }
 
 .subscribe-section h3 {
-  color: #006600;
+  color: #38a169;
   margin-bottom: 15px;
 }
 
@@ -251,7 +245,7 @@ body {
 
 .subscribe-input {
   padding: 10px 15px;
-  border: 2px solid #69ff69;
+  border: 2px solid #48bb78;
   border-radius: 20px;
   font-size: 1rem;
   outline: none;
@@ -260,7 +254,7 @@ body {
 
 .subscribe-button {
   padding: 10px 20px;
-  background: #00cc00;
+  background: #48bb78;
   color: white;
   border: none;
   border-radius: 20px;
@@ -270,14 +264,14 @@ body {
 }
 
 .subscribe-button:hover {
-  background: #009900;
+  background: #38a169;
 }
 
 /* Comments Section */
 .comments-section {
   margin-top: 40px;
   padding: 20px 0;
-  border-top: 2px dashed #ff69b4;
+  border-top: 2px dashed #4a90e2;
 }
 
 /* Responsive Design */

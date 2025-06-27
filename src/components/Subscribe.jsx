@@ -9,7 +9,7 @@ const Subscribe = () => {
     // For now, just show a success message
     // In production, you'd integrate with Mailchimp, Buttondown, etc.
     if (email) {
-      setStatus('Thank you for subscribing! ヽ(♡‿♡)ノ')
+      setStatus('Thanks for subscribing!')
       setEmail('')
       setTimeout(() => setStatus(''), 3000)
     }
@@ -17,11 +17,11 @@ const Subscribe = () => {
   
   return (
     <div className="subscribe-section">
-      <h3>📧 Subscribe to new posts!</h3>
-      <p>Get notified when I post something new~ (´｡• ᵕ •｡`) ♡</p>
+      <h3>📧 Subscribe to updates</h3>
+      <p>Get notified when I post something new</p>
       
       {status && (
-        <div style={{ color: '#006600', marginBottom: '15px', fontWeight: 'bold' }}>
+        <div style={{ color: '#38a169', marginBottom: '15px', fontWeight: 'bold' }}>
           {status}
         </div>
       )}
@@ -30,13 +30,13 @@ const Subscribe = () => {
         <input
           type="email"
           className="subscribe-input"
-          placeholder="your email address ✉️"
+          placeholder="your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <button type="submit" className="subscribe-button">
-          Subscribe! ♡
+          Subscribe
         </button>
       </form>
     </div>

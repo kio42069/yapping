@@ -53,8 +53,8 @@ const Blog = () => {
                   key={tag}
                   style={{
                     display: 'inline-block',
-                    background: '#ffb3e6',
-                    color: '#ff1493',
+                    background: '#b3d4f7',
+                    color: '#2c5282',
                     padding: '4px 8px',
                     borderRadius: '10px',
                     fontSize: '0.8rem',
@@ -74,13 +74,13 @@ const Blog = () => {
       </div>
       
       <div className="decorative-divider" style={{ marginTop: '50px' }}>
-        ✧･ﾟ: *✧･ﾟ:* ♡ *:･ﾟ✧*:･ﾟ✧
+        ──────────────────────────────────────────────────────
       </div>
       
       <Subscribe />
       
-      <div style={{ textAlign: 'center', marginTop: '40px', color: '#ff69b4' }}>
-        <p>more posts coming soon! ♡ (◕‿◕)♡</p>
+      <div style={{ textAlign: 'center', marginTop: '40px', color: '#4a90e2' }}>
+        <p>more posts coming soon!</p>
       </div>
     </div>
   )

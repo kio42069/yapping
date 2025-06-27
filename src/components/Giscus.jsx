@@ -14,7 +14,7 @@ const Giscus = ({ repoId, categoryId }) => {
     script.setAttribute('data-reactions-enabled', '1')
     script.setAttribute('data-emit-metadata', '0')
     script.setAttribute('data-input-position', 'bottom')
-    script.setAttribute('data-theme', 'light_protanopia')
+    script.setAttribute('data-theme', 'light')
     script.setAttribute('data-lang', 'en')
     script.crossOrigin = 'anonymous'
     script.async = true
@@ -37,11 +37,11 @@ const Giscus = ({ repoId, categoryId }) => {
   
   return (
     <div className="comments-section">
-      <h3 style={{ color: '#ff69b4', textAlign: 'center', marginBottom: '20px' }}>
+      <h3 style={{ color: '#4a90e2', textAlign: 'center', marginBottom: '20px' }}>
         💬 Comments
       </h3>
-      <p style={{ textAlign: 'center', color: '#666', marginBottom: '20px' }}>
-        Share your thoughts! Comments are powered by GitHub Discussions ✨
+      <p style={{ textAlign: 'center', color: '#718096', marginBottom: '20px' }}>
+        Share your thoughts! Comments are powered by GitHub Discussions
       </p>
       <div id="giscus-container"></div>
     </div>
