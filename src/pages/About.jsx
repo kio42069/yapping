@@ -4,62 +4,56 @@ const About = () => {
   return (
     <div className="about-page">
       <div className="welcome-section">
-        <h2>🌟 about me 🌟</h2>
+        <h2>🤔 about this place</h2>
       </div>
       
       <div className="intro-text">
+        <h3>why</h3>
         <p>
-          hello hello! ✨ thanks for stopping by my about page~
+          Why this goofy ass blog and not any well developed social media like oh maybe instagram or twitter
         </p>
+        <ul style={{ textAlign: 'left', marginLeft: '20px' }}>
+          <li>because of the fken ai generated low quality slop</li>
+          <li>because of the bombardment of personalised ads</li>
+          <li>because of the absolute shithousery of bot accounts</li>
+        </ul>
         <p>
-          i'm a creative soul who loves all things cute and colorful! when i'm not busy 
-          with daily life, you can find me drawing, playing cozy games, or browsing the 
-          internet for cute aesthetics and inspiration.
+          dead internet theory be looking pretty real rn
         </p>
       </div>
       
       <div className="interests-section">
-        <h3>💫 a bit more about me</h3>
+        <h3>💬 but i do wanna keep yapping publicly</h3>
         <p>
-          <strong>age:</strong> early 20s ✨<br/>
-          <strong>location:</strong> somewhere cozy<br/>
-          <strong>favorite colors:</strong> pink, purple, soft blues<br/>
-          <strong>hobbies:</strong> digital art, reading, gaming, collecting cute things<br/>
-          <strong>current obsession:</strong> making this website perfect! (｡◕‿◕｡)
+          i dont want to lose connection with the 20 ppl i broadcast my shitposting and thoughts to now do i
+        </p>
+        <p>
+          a blog would be pretty epic considering now my "stories" are now not limited to 24 hours, 
+          and hence anyone who did not have the time to check it out within that specific period would 
+          not miss out on the absolute fire my brain cooks every now and then
         </p>
       </div>
       
       <div className="decorative-divider">
-        ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡
-      </div>
-      
-      <div className="interests-section" style={{ background: 'rgba(255, 179, 230, 0.2)', borderColor: '#ff69b4' }}>
-        <h3>🎨 creative stuff</h3>
-        <p>
-          i love making art! mostly digital illustrations with lots of pink and sparkles ✨
-          i'm always experimenting with new styles and trying to capture that dreamy, 
-          kawaii aesthetic that makes my heart happy.
-        </p>
-        <p>
-          sometimes i share my art here on the blog, and i'm always open to connecting 
-          with other creative people!
-        </p>
+        ✧･ﾟ: *✧･ﾟ:* ♡ *:･ﾟ✧*:･ﾟ✧
       </div>
       
       <div className="updates-section">
-        <h3>📮 want to chat?</h3>
+        <h3>📋 any plans?</h3>
+        <p>tbf nothing solid, atm i can think of:</p>
+        <ol style={{ textAlign: 'left', marginLeft: '20px' }}>
+          <li>just regular short thought / stories</li>
+          <li>tech/electronics/games posting</li>
+          <li>rants</li>
+          <li>picture dumps (like rarely, monthly or semesterly dunno whenever i got enough for a spam lol)</li>
+        </ol>
         <p>
-          i'd love to make new friends who share similar interests! feel free to leave 
-          comments on my blog posts or just say hi ♡
-        </p>
-        <p>
-          please keep things kind and positive - this is meant to be a safe, cozy space 
-          for everyone (´｡• ᵕ •｡`) ♡
+          and yea thats pretty much it feel free to drop by sometimes to check out whats new
         </p>
       </div>
       
       <div style={{ textAlign: 'center', marginTop: '40px', color: '#ff69b4' }}>
-        <p>thanks for getting to know me a little better! (◡ ‿ ◡) ♡</p>
+        <p><em>bye bye</em></p>
       </div>
     </div>
   )

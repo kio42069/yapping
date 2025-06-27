@@ -5,61 +5,59 @@ const Home = () => {
   return (
     <div className="home-page">
       <div className="welcome-section">
-        <h2>🌸 hi there, welcome! 🌸</h2>
+        <h2>👋 sup, welcome to my corner</h2>
         <div className="intro-text">
           <p>
-            hii! this is my little corner of the internet where I share things I love and thoughts that pop into my head! 
-            I'm passionate about cute things, gaming, art, and making friends ✨ (◕‿◕)♡
+            so yeah, i decided to make a blog instead of posting stories on instagram or whatever. 
+            mainly because i'm tired of ai slop, ads, and bot accounts everywhere.
           </p>
           <p>
-            feel free to look around and stay as long as you'd like! there's always something new to discover here~
+            this is where i'll be dumping my thoughts, rants, and random stuff that my brain cooks up. 
+            no 24-hour time limit, no algorithm bs, just pure unfiltered content.
           </p>
         </div>
       </div>
       
       <div className="decorative-divider">
-        ⋆｡‧˚ʚ♡ɞ˚‧｡⋆ ⋆｡‧˚ʚ♡ɞ˚‧｡⋆ ⋆｡‧˚ʚ♡ɞ˚‧｡⋆
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       </div>
       
       <div className="interests-section">
-        <h3>💕 some things i love</h3>
-        <p>
-          ✨ cute aesthetics & kawaii culture<br/>
-          🎮 cozy indie games & pixel art<br/>
-          🎨 digital art & illustration<br/>
-          📚 manga & light novels<br/>
-          🌸 anything pink and sparkly!<br/>
-          ☕ staying cozy at home with tea
-        </p>
+        <h3>🤔 what to expect here</h3>
+        <p>tbf nothing solid, but probably:</p>
+        <ul style={{ textAlign: 'left', marginLeft: '20px' }}>
+          <li>regular short thoughts / stories</li>
+          <li>tech/electronics/games posting</li>
+          <li>rants (definitely rants)</li>
+          <li>picture dumps (rarely, when i actually have enough content lol)</li>
+        </ul>
       </div>
       
       <div className="decorative-divider">
-        ✧･ﾟ: *✧･ﾟ:* ♡ *:･ﾟ✧*:･ﾟ✧
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       </div>
       
       <div className="updates-section">
         <h3>📋 recent updates</h3>
         <div className="update-item">
-          <span className="update-date">2025-06-27:</span> 
-          launched my new blog! everything is fresh and ready for content ✨
-        </div>
-        <div className="update-item">
           <span className="update-date">2025-06-26:</span> 
-          working on the design and layout - so excited to share this space!
+          posted "Hello bacchon" - explained why i'm doing this blog thing
         </div>
         <div className="update-item">
           <span className="update-date">2025-06-25:</span> 
-          decided to start my own blog after being inspired by amazing neocities sites
+          started working on that tracking rant (still not finished lol)
+        </div>
+        <div className="update-item">
+          <span className="update-date">2025-06-25:</span> 
+          set up this whole blog thing - pretty proud of myself ngl
         </div>
       </div>
       
       <Subscribe />
       
       <div style={{ textAlign: 'center', marginTop: '40px', color: '#ff69b4' }}>
-        <p>thanks for visiting! come back soon~ (´｡• ω •｡`) ♡</p>
-        <div style={{ fontSize: '2rem' }}>
-          🌸✨🦋✨🌸
-        </div>
+        <p>anyway, feel free to stick around and see what happens</p>
+        <p><em>bye bye</em></p>
       </div>
     </div>
   )

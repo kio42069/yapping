@@ -1,32 +1,35 @@
 ---
-title: "✨ welcome to my blog! ✨"
-date: "2025-06-27"
-tags: ["intro", "personal"]
-excerpt: "hi everyone! i'm so excited to finally launch my little blog space. this is where i'll be sharing my thoughts, art, and all the cute things that make me happy..."
+title: "Hello bacchon"
+date: "2025-06-26"
+tags: ["welcome", "hi"]
+excerpt: "Why this goofy ass blog and not any well developed social media like oh maybe instagram or twitter..."
 ---
 
-# hi there! (◕‿◕)♡
+# why
 
-i'm so excited to finally launch my little blog space! this has been a dream of mine for a while now, and seeing it come together feels absolutely magical ✨
+Why this goofy ass blog and not any well developed social media like oh maybe instagram or twitter
 
-## what you can expect here
+- because of the fken ai generated low quality slop
+- because of the bombardment of personalised ads
+- because of the absolute shithousery of bot accounts
 
-this cozy corner of the internet will be filled with:
+dead internet theory be looking pretty real rn
 
-- 🎨 **art updates** - sharing my latest digital illustrations and creative experiments
-- 🎮 **gaming thoughts** - reviews and recommendations for indie games that warm my heart  
-- 🌸 **aesthetic inspiration** - collections of things that spark joy and creativity
-- 💭 **personal musings** - random thoughts and daily life moments
-- 📚 **creative resources** - tools, tutorials, and discoveries i want to share
+## but i do wanna keep yapping publicly
 
-## creating a safe space
+i dont want to lose connection with the 20 ppl i broadcast my shitposting and thoughts to now do i
 
-i want this blog to be a positive, welcoming place for everyone. please be kind in the comments and remember that we're all just trying to find a little happiness and connection ♡
+a blog would be pretty epic considering now my "stories" are now not limited to 24 hours, and hence anyone who did not have the time to check it out within that specific period would not miss out on the absolute fire my brain cooks every now and then
 
-## thank you for being here
+## any plans?
+tbf nothing solid, atm i can think of 
+1. just regular short thought / stories
+2. tech/electronics/games posting
+3. rants
+4. picture dumps (like rarely, monthly or semesterly dunno whenever i got enough for a spam lol)
 
-seriously, thank you for taking the time to visit and read this! having people who are interested in the same things makes the internet feel so much less lonely ♡
+and yea thats pretty much it feel free to drop by sometimes to check out whats new
 
-i can't wait to share more with you all!
+---
 
-*xoxo* 💕
+*bye bye*

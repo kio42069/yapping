@@ -12,100 +12,49 @@ const BlogPost = () => {
     // Mock post data - in a real app, you'd fetch the markdown file
     const mockPosts = {
       'welcome-to-my-blog': {
-        title: '✨ welcome to my blog! ✨',
-        date: '2025-06-27',
-        tags: ['intro', 'personal'],
-        content: `# hi there! (◕‿◕)♡
-
-i'm so excited to finally launch my little blog space! this has been a dream of mine for a while now, and seeing it come together feels absolutely magical ✨
-
-## what you can expect here
-
-this cozy corner of the internet will be filled with:
-
-- 🎨 **art updates** - sharing my latest digital illustrations and creative experiments
-- 🎮 **gaming thoughts** - reviews and recommendations for indie games that warm my heart  
-- 🌸 **aesthetic inspiration** - collections of things that spark joy and creativity
-- 💭 **personal musings** - random thoughts and daily life moments
-- 📚 **creative resources** - tools, tutorials, and discoveries i want to share
-
-## creating a safe space
-
-i want this blog to be a positive, welcoming place for everyone. please be kind in the comments and remember that we're all just trying to find a little happiness and connection ♡
-
-## thank you for being here
-
-seriously, thank you for taking the time to visit and read this! having people who are interested in the same things makes the internet feel so much less lonely ♡
-
-i can't wait to share more with you all!
-
-*xoxo* 💕`
-      },
-      'cozy-aesthetic-inspiration': {
-        title: '🌸 finding cozy aesthetic inspiration',
+        title: 'Hello bacchon',
         date: '2025-06-26',
-        tags: ['aesthetics', 'inspiration'],
-        content: `# creating cozy vibes ✨
+        tags: ['welcome', 'hi'],
+        content: `# why
 
-lately i've been really drawn to soft, cozy aesthetics. there's something so comforting about pastels, warm lighting, and cute decorative elements that just makes everything feel more peaceful~
+Why this goofy ass blog and not any well developed social media like oh maybe instagram or twitter
 
-## what makes something feel "cozy"?
+- because of the fken ai generated low quality slop
+- because of the bombardment of personalised ads
+- because of the absolute shithousery of bot accounts
 
-for me, cozy aesthetics include:
+dead internet theory be looking pretty real rn
 
-- **soft color palettes** - think blush pinks, cream whites, sage greens
-- **natural textures** - wood, cotton, wool, dried flowers  
-- **warm lighting** - fairy lights, candles, golden hour vibes
-- **personal touches** - handmade items, photos, collections of tiny treasures
+## but i do wanna keep yapping publicly
 
-## inspiration sources
+i dont want to lose connection with the 20 ppl i broadcast my shitposting and thoughts to now do i
 
-some of my favorite places to find cozy inspiration:
+a blog would be pretty epic considering now my "stories" are now not limited to 24 hours, and hence anyone who did not have the time to check it out within that specific period would not miss out on the absolute fire my brain cooks every now and then
 
-- **pinterest boards** with cottagecore and soft aesthetic themes
-- **indie game art** - so many games have the most beautiful cozy environments
-- **small artists on social media** who share their daily life and creative spaces
-- **vintage items** that have stories and character
+## any plans?
+tbf nothing solid, atm i can think of 
+1. just regular short thought / stories
+2. tech/electronics/games posting
+3. rants
+4. picture dumps (like rarely, monthly or semesterly dunno whenever i got enough for a spam lol)
 
-## bringing it into digital spaces
+and yea thats pretty much it feel free to drop by sometimes to check out whats new
 
-even online, we can create cozy feelings through:
+---
 
-- choosing soft, harmonious color schemes
-- using gentle, rounded typography  
-- adding small decorative elements
-- sharing personal, authentic content
-
-what makes *you* feel cozy? i'd love to hear about it in the comments! ♡`
+*bye bye*`
       },
-      'favorite-indie-games': {
-        title: '🎮 my current favorite indie games',
+      'on-why-i-hate-tracking': {
+        title: 'on why i hate tracking',
         date: '2025-06-25',
-        tags: ['gaming', 'recommendations'],
-        content: `# cozy gaming recommendations ✨
+        tags: ['rant'],
+        content: `# on why i hate tracking
 
-i wanted to share some of the indie games that have been making me happy lately! these are perfect for cozy gaming sessions when you want something relaxing and beautiful~
+*[Content appears to be placeholder in the original - this post was created but not filled out yet]*
 
-## current favorites
+Coming soon... when I actually finish writing this rant about tracking and privacy invasion.
 
-### 🌙 A Short Hike
-this game is pure magic. you play as a little bird exploring a peaceful mountain, helping other woodland creatures with small tasks. the pixel art style is gorgeous and the whole experience feels like a warm hug!
-
-### 🎨 Unpacking  
-there's something so satisfying about unpacking boxes and arranging items in cozy living spaces. each level tells a story just through the objects you place, and it's incredibly meditative.
-
-### 🌸 Spirit of the North
-a beautiful adventure game where you play as a fox in stunning nordic landscapes. no dialogue, just gorgeous visuals and peaceful exploration with your spirit guide.
-
-## what i love about indie games
-
-indie games often have this special quality that big studios sometimes miss - they feel personal and heartfelt. the developers put so much love into small details that make the experience feel unique and special.
-
-## looking for more recommendations?
-
-if you know any cozy indie games i should try, please let me know in the comments! i'm always looking for new beautiful worlds to explore ♡
-
-happy gaming! 🎮✨`
+For now, just know that I really, really hate being tracked online. More thoughts to follow when I'm less lazy about finishing this post.`
       }
     }
     

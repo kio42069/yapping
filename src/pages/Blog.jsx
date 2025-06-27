@@ -11,24 +11,17 @@ const Blog = () => {
     const mockPosts = [
       {
         slug: 'welcome-to-my-blog',
-        title: '✨ welcome to my blog! ✨',
-        date: '2025-06-27',
-        excerpt: 'hi everyone! i\'m so excited to finally launch my little blog space. this is where i\'ll be sharing my thoughts, art, and all the cute things that make me happy...',
-        tags: ['intro', 'personal']
-      },
-      {
-        slug: 'cozy-aesthetic-inspiration',
-        title: '🌸 finding cozy aesthetic inspiration',
+        title: 'Hello bacchon',
         date: '2025-06-26',
-        excerpt: 'lately i\'ve been really drawn to soft, cozy aesthetics. there\'s something so comforting about pastels, warm lighting, and cute decorative elements...',
-        tags: ['aesthetics', 'inspiration']
+        excerpt: 'Why this goofy ass blog and not any well developed social media like oh maybe instagram or twitter...',
+        tags: ['welcome', 'hi']
       },
       {
-        slug: 'favorite-indie-games',
-        title: '🎮 my current favorite indie games',
+        slug: 'on-why-i-hate-tracking',
+        title: 'on why i hate tracking',
         date: '2025-06-25',
-        excerpt: 'i wanted to share some of the indie games that have been making me happy lately! these are perfect for cozy gaming sessions...',
-        tags: ['gaming', 'recommendations']
+        excerpt: 'A rant about tracking and privacy (content coming soon)',
+        tags: ['rant']
       }
     ]
     
