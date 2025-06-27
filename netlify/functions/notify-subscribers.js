@@ -27,6 +27,18 @@ function getLatestBlogPost() {
   };
 }
 
+function getLastSentSlug() {
+  try {
+    return fs.readFileSync('/tmp/last-sent-post.txt', 'utf8').trim();
+  } catch {
+    return null;
+  }
+}
+
+function setLastSentSlug(slug) {
+  fs.writeFileSync('/tmp/last-sent-post.txt', slug, 'utf8');
+}
+
 exports.handler = async function(event, context) {
   const NETLIFY_API_TOKEN = process.env.NETLIFY_API_TOKEN;
   const SITE_ID = process.env.NETLIFY_SITE_ID;
@@ -42,6 +54,12 @@ exports.handler = async function(event, context) {
   const post = getLatestBlogPost();
   if (!post) {
     return { statusCode: 200, body: 'No blog posts found.' };
+  }
+
+  // Check if this post was already sent
+  const lastSentSlug = getLastSentSlug();
+  if (lastSentSlug === post.slug) {
+    return { statusCode: 200, body: 'No new post to send.' };
   }
 
   // Compose styled HTML email
@@ -71,6 +89,7 @@ exports.handler = async function(event, context) {
 
   if (emails.length > 0) {
     await sgMail.sendMultiple(msg);
+    setLastSentSlug(post.slug);
   }
 
   return {
