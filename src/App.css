@@ -26,6 +26,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(74, 144, 226, 0.2);
   overflow: hidden;
+  margin-top: 80px; /* Space for fixed music player */
 }
 
 /* Header Styles */
@@ -274,6 +275,92 @@ body {
   border-top: 2px dashed #4a90e2;
 }
 
+/* Music Player Styles */
+.music-player {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #4a90e2;
+  border-radius: 25px;
+  padding: 8px 15px;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.music-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-btn:hover {
+  background: rgba(74, 144, 226, 0.1);
+  transform: scale(1.1);
+}
+
+.music-btn:active {
+  transform: scale(0.95);
+}
+
+.current-track {
+  font-size: 0.8rem;
+  color: #4a90e2;
+  font-weight: 500;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 5px;
+}
+
+/* Responsive Music Player */
+@media (max-width: 768px) {
+  .music-player {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+  }
+  
+  .music-btn {
+    font-size: 1rem;
+    padding: 3px 6px;
+  }
+  
+  .current-track {
+    max-width: 80px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-player {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 10px auto;
+    width: fit-content;
+  }
+  
+  .current-track {
+    display: none; /* Hide track name on very small screens */
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
@@ -282,6 +369,7 @@ body {
   
   .App {
     border-radius: 10px;
+    margin-top: 70px; /* Adjust for smaller music player */
   }
   
   .header h1 {
@@ -306,5 +394,11 @@ body {
   .subscribe-input {
     min-width: 100%;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    margin-top: 20px; /* Music player becomes relative positioned */
   }
 }

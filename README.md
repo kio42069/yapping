@@ -19,6 +19,7 @@ Dead internet theory be looking pretty real rn.
 - Blog posts in Markdown
 - Giscus comments integration
 - Email subscription 
+- **Universal music player** with auto-play and shuffle
 - Ready for Netlify deployment
 
 ## Getting Started
@@ -35,6 +36,33 @@ Dead internet theory be looking pretty real rn.
    ```sh
    npm run build
    ```
+
+## Adding Music 🎵
+
+### Automatic Method (Recommended)
+**Single track:**
+```cmd
+# Windows
+add-music.bat "C:\path\to\your\song.mp3"
+
+# Mac/Linux  
+./add-music.sh ~/path/to/your/song.mp3
+```
+
+**Bulk import from folder:**
+```cmd
+# Windows
+add-music-folder.bat "C:\path\to\your\music\folder"
+
+# Mac/Linux
+./add-music-folder.sh ~/path/to/your/music/folder
+```
+
+### Manual Method
+1. Add music files to `public/music/`
+2. Update the `musicFiles` array in `src/components/MusicPlayer.jsx`
+
+**Supported formats:** MP3, WAV, OGG, M4A, FLAC
 
 ## Deployment
 - **Build command**: `npm run build`
