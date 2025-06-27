@@ -25,10 +25,12 @@ const Subscribe = () => {
         setStatus('🎉 Thanks for subscribing! You\'ll hear from me when I post something new.')
         setEmail('')
       } else {
-        setStatus('❌ Oops, something went wrong. Please try again.')
+        // More helpful error message
+        setStatus('❌ Hmm, that didn\'t work. This might be because forms aren\'t set up yet on the live site. Try again after the site is deployed to Netlify!')
       }
     } catch (error) {
-      setStatus('❌ Network error. Please check your connection and try again.')
+      console.log('Form submission error:', error)
+      setStatus('❌ Network error. Make sure you\'re connected to the internet and the site is deployed to Netlify for forms to work.')
     }
     
     setIsSubmitting(false)
