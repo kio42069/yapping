@@ -8,22 +8,37 @@ const md = new MarkdownIt();
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-function getLatestBlogPost() {
-  const blogDir = path.join(__dirname, '../../src/blog');
-  const files = fs.readdirSync(blogDir)
-    .filter(f => f.endsWith('.md'))
-    .map(f => ({
-      name: f,
-      time: fs.statSync(path.join(blogDir, f)).mtime.getTime()
-    }))
-    .sort((a, b) => b.time - a.time);
-  if (!files.length) return null;
-  const latestFile = files[0].name;
-  const content = fs.readFileSync(path.join(blogDir, latestFile), 'utf8');
+const GITHUB_OWNER = 'kio42069';
+const GITHUB_REPO = 'yapping';
+const BLOG_DIR = 'blog';
+
+async function getLatestBlogPost() {
+  // 1. List files in the blog directory
+  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${BLOG_DIR}`;
+  const headers = process.env.GITHUB_TOKEN
+    ? { Authorization: `token ${process.env.GITHUB_TOKEN}` }
+    : {};
+  const res = await fetch(apiUrl, { headers });
+  const files = await res.json();
+
+  // 2. Filter for .md files and sort by name (or add logic for commit date)
+  const mdFiles = files.filter(f => f.name.endsWith('.md'));
+  if (!mdFiles.length) return null;
+
+  // 3. Get the latest file (by name, or you can use commit date for more accuracy)
+  // For now, sort by name descending (edit if you want by commit date)
+  mdFiles.sort((a, b) => b.name.localeCompare(a.name));
+  const latestFile = mdFiles[0];
+
+  // 4. Fetch the raw content
+  const rawRes = await fetch(latestFile.download_url);
+  const content = await rawRes.text();
+
+  // 5. Parse frontmatter and markdown
   const { attributes, body } = fm(content);
   return {
     ...attributes,
-    slug: latestFile.replace(/\.md$/, ''),
+    slug: latestFile.name.replace(/\\.md$/, ''),
     html: md.render(body)
   };
 }
@@ -57,8 +72,8 @@ exports.handler = async function(event, context) {
   const submissions = await res.json();
   const emails = [...new Set(submissions.map(sub => sub.data.email).filter(Boolean))];
 
-  // Get latest blog post
-  const post = getLatestBlogPost();
+  // Get latest blog post from GitHub
+  const post = await getLatestBlogPost();
   if (!post) {
     return { statusCode: 200, body: 'No blog posts found.' };
   }
