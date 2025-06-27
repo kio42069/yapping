@@ -1,11 +1,12 @@
-import matter from 'gray-matter'
+import fm from 'front-matter'
 
 // Use Vite's import.meta.glob to dynamically import all markdown files
-const postFiles = import.meta.glob('./blog/*.md', { eager: true, as: 'raw' })
+const postFiles = import.meta.glob('/src/blog/*.md', { eager: true, as: 'raw' })
+console.log('DEBUG: postFiles keys:', Object.keys(postFiles))
 
 // Parse a markdown file and extract frontmatter
 const parseBlogPost = async (filepath, content) => {
-  const { data, content: markdownContent } = matter(content)
+  const { attributes: data, body: markdownContent } = fm(content)
   
   // Extract slug from filepath (e.g., "/blog/welcome-to-my-blog.md" -> "welcome-to-my-blog")
   const slug = filepath.split('/').pop().replace('.md', '')
