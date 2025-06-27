@@ -8,4 +8,4 @@
   status = 200
 
 [functions."notify-subscribers"]
-  schedule = "0 * * * *" # every hour
+  schedule = "* * * * *" # every minute
