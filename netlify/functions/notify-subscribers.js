@@ -3,7 +3,8 @@ const sgMail = require('@sendgrid/mail');
 const fs = require('fs');
 const path = require('path');
 const fm = require('front-matter');
-const marked = require('marked');
+const MarkdownIt = require('markdown-it');
+const md = new MarkdownIt();
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -23,7 +24,7 @@ function getLatestBlogPost() {
   return {
     ...attributes,
     slug: latestFile.replace(/\.md$/, ''),
-    html: marked.parse(body)
+    html: md.render(body)
   };
 }
 
