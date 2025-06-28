@@ -2,7 +2,7 @@
 title: "trinkets of my house"
 date: "2025-06-28"
 tags: ["yap"]
-excerpt: "got some goofy stuff happening around my home"
+excerpt: "some interesting stuff happening around my home (and head)"
 ---
 
 # house.md
@@ -43,6 +43,34 @@ There was another fun project idea somay gave me, but it's a bit large scale, ev
 It has also been a long while since I have made any electronics project, and I want to make a couple of ideas, nothing solid yet (hideo kojima mentioned?)
 
 - Something to do with led matrices, maybe [a clock of some kind?](https://www.instructables.com/Cloxel-WLED-Pixel-Clock) or maybe a led cube (looking at you aarav)
+[clock](https://content.instructables.com/FXF/2MCK/MB9DXEQX/FXF2MCKMB9DXEQX.png?auto=webp&frame=1&fit=bounds&md=MjAyNS0wNS0zMCAwMzoyNjoyNy4w)
+*clock*
 - Something to do with music, maybe a miniature casette player of some kind? An ipod clone? Unsure
 - Something to do with wearables, accessories, some cool lighting / audio / haptic feedback kind of product that I can fidget around with while its hanging on my bag straps or fro my pants or something
 
+# rant
+why did i, an avid phone enjoyer start to slowly lose interest even though my brain is now hardwired for 15 second clips?
+
+because of the FUCKING ads
+
+At the beginning of summer, i had only once looked up journals and stationary. Guess what content I got the entire summer?
+Diaries, pens, stamp sets, and the same 8 vendors. I got an ad or two after every 3 stories initially, but slowly it started driving me crazy. Towards the starting of last week, it got as bad as 3 ads after every 2 stories. Like man I am here to catch up on what my friends and acquaintances are doing now get stationary shoved down my throat chill out brother
+
+And apart from that, the low quality ai generated slop. How the heck did I find that stuff funny that was so stupid I could feel myself lose braincells everytime I watched something like that. Then my dad would send ai generated sob videos on the family group, then I would see ai weather reporters on the news, and the fucking actual human reporters use ai generated photos instead of actual coverage like????? Isn't your entire job to cover what is actually happening without tampering or creating fake images / videos
+
+I don't wanna sounds like I have a tinfoil hat on my head right now but the dead internet theory doesn't seem too dystopian anymore. Twitter and snapchat are just bots talking to other bots, replying with their own websites to every single possible post, even on things that are completely unrelated
+
+A while ago some bot commented something super random as usual on another person's post from over a decade ago. Over a fucking DECADE ago. And it was simply followed by 6 more bots commenting similar shit on it too, just for the engagement. I'll attach the photo if i come across it again
+
+And instagram? Just content farmers, ai influencers, bot accounts increasing engagement like 😭😭😭😭😭 its so hard to not come across them anymore unless I stick to my home page which I'd say is pretty high quality right now. It got some really cool accounts which I'll list down below, people who just speak fun facts, random trivia but it feels pretty genuine and not like I'm being tied down and force fed retardedism
+
+Okay I might be reciprocating a lot of my thoughts from what I've been listening to lately, but still that doesn't mean those are incorrect opinions, they do seem very genuine concerns. Of course I cannot simply quit as it would lead to heavy detachment from my social circle and that is pretty anti human. As sad as it is but it's true, but atleast I can stay online just as much as I need instead of wasting hours on end on nothing
+
+Home isn't the best either but we gonna keep those rants for my word document and not publicise it heh
+
+
+--- 
+
+Anyways I think that is enough for today, I will be talking more soon hopefully! 
+
+*byebye 👋👋👋👋*
