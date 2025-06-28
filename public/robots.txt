@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Disallow access to sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /.env
+Disallow: /email-config.json
+Disallow: /subscribers.json
+
+# Sitemap (optional - add if you have one)
+# Sitemap: https://your-site.netlify.app/sitemap.xml
+
+# Crawl delay (optional - slows down bots)
+Crawl-delay: 1 
