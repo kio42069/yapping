@@ -321,7 +321,7 @@ function createEmailHTML(post) {
       </div>
       
       <div class="cta-button">
-        <a href="https://your-site.netlify.app/blog/${post.slug}">Read on the site →</a>
+        <a href="https://kiddofour.netlify.app/blog/${post.slug}">Read on the site →</a>
       </div>
       
       <div class="footer">
@@ -338,7 +338,7 @@ async function sendEmails(post, subscribers) {
   const transporter = createTransport(EMAIL_CONFIG);
   
   const html = createEmailHTML(post);
-  const text = `${post.title}\n${post.date}\nRead: https://your-site.netlify.app/blog/${post.slug}`;
+  const text = `${post.title}\n${post.date}\nRead: https://kiddofour.netlify.app/blog/${post.slug}`;
 
   let successCount = 0;
   let errorCount = 0;
