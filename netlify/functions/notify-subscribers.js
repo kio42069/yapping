@@ -10,7 +10,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const GITHUB_OWNER = 'kio42069';
 const GITHUB_REPO = 'yapping';
-const BLOG_DIR = 'blog';
+const BLOG_DIR = 'src/blog';
 
 async function getLatestBlogPost() {
   // 1. List files in the blog directory
