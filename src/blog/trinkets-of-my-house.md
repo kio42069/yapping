@@ -6,6 +6,17 @@ excerpt: "some interesting stuff happening around my home (and head)"
 ---
 
 # house.md
+## Table of Contents
+
+- [House Stories](#house-stories)
+- [Projects](#projects)
+  - [Software](#software)
+  - [Hardware](#hardware)
+- [Rant](#rant)
+
+---
+
+# House Stories
 
 I have noticed a few, unusual and funny things around my house which I think would be fun to share
 

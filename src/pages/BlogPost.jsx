@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import GiscusComments from '../components/Giscus'
+import SimpleComments from '../components/SimpleComments'
 import { getBlogPost } from '../utils/blogUtils'
 
 const BlogPost = () => {
   const { slug } = useParams()
   const [post, setPost] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [useSimpleComments, setUseSimpleComments] = useState(false)
   
   useEffect(() => {
     const loadPost = async () => {
@@ -86,9 +88,18 @@ const BlogPost = () => {
       }}>
         <ReactMarkdown
           components={{
-            h1: ({children}) => <h2 style={{ color: '#2c5282', marginTop: '40px', marginBottom: '20px' }}>{children}</h2>,
-            h2: ({children}) => <h3 style={{ color: '#4a90e2', marginTop: '30px', marginBottom: '15px' }}>{children}</h3>,
-            h3: ({children}) => <h4 style={{ color: '#4a90e2', marginTop: '25px', marginBottom: '10px' }}>{children}</h4>,
+            h1: ({children}) => {
+              const id = children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+              return <h2 id={id} style={{ color: '#2c5282', marginTop: '40px', marginBottom: '20px' }}>{children}</h2>
+            },
+            h2: ({children}) => {
+              const id = children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+              return <h3 id={id} style={{ color: '#4a90e2', marginTop: '30px', marginBottom: '15px' }}>{children}</h3>
+            },
+            h3: ({children}) => {
+              const id = children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+              return <h4 id={id} style={{ color: '#4a90e2', marginTop: '25px', marginBottom: '10px' }}>{children}</h4>
+            },
             p: ({children}) => <p style={{ marginBottom: '15px' }}>{children}</p>,
             ul: ({children}) => <ul style={{ paddingLeft: '20px', marginBottom: '15px' }}>{children}</ul>,
             ol: ({children}) => <ol style={{ paddingLeft: '20px', marginBottom: '15px' }}>{children}</ol>,
@@ -153,20 +164,56 @@ const BlogPost = () => {
                 }}
               />
             ),
-            a: ({href, children}) => (
-              <a 
-                href={href} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{
-                  color: '#4a90e2',
-                  textDecoration: 'none',
-                  borderBottom: '1px solid #4a90e2'
-                }}
-              >
-                {children}
-              </a>
-            )
+            a: ({href, children}) => {
+              // Check if it's an internal navigation link (starts with #)
+              const isInternalLink = href && href.startsWith('#')
+              
+              if (isInternalLink) {
+                // Handle internal navigation - scroll to the element
+                const handleClick = (e) => {
+                  e.preventDefault()
+                  const targetId = href.substring(1) // Remove the # from href
+                  const targetElement = document.getElementById(targetId)
+                  if (targetElement) {
+                    targetElement.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    })
+                  }
+                }
+                
+                return (
+                  <a 
+                    href={href} 
+                    onClick={handleClick}
+                    style={{
+                      color: '#4a90e2',
+                      textDecoration: 'none',
+                      borderBottom: '1px solid #4a90e2',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    {children}
+                  </a>
+                )
+              }
+              
+              // External links - open in new tab
+              return (
+                <a 
+                  href={href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    color: '#4a90e2',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid #4a90e2'
+                  }}
+                >
+                  {children}
+                </a>
+              )
+            }
           }}
         >
           {post.content}
@@ -177,7 +224,29 @@ const BlogPost = () => {
         ──────────────────────────────────────────────────────
       </div>
       
-      <GiscusComments />
+      {useSimpleComments ? (
+        <SimpleComments />
+      ) : (
+        <GiscusComments />
+      )}
+      
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <button
+          onClick={() => setUseSimpleComments(!useSimpleComments)}
+          style={{
+            background: 'none',
+            border: '1px solid #4a90e2',
+            color: '#4a90e2',
+            padding: '5px 10px',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '0.8rem',
+            fontFamily: 'GeneraleStation, Courier New, monospace'
+          }}
+        >
+          {useSimpleComments ? 'Switch to Giscus Comments' : 'Switch to Simple Comments'}
+        </button>
+      </div>
     </div>
   )
 }
