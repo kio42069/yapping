@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Email notification system - sensitive files
+email-config.json
+.env
+last-sent.txt
+subscribers.json
+
+# Setup scripts (optional - can be removed if you prefer)
+setup-env.bat
