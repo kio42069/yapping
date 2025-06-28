@@ -1,10 +1,10 @@
 @echo off
 echo ========================================
-echo    Netlify API Setup
+echo    Environment Setup
 echo ========================================
 echo.
 
-echo This will help you set up Netlify API credentials.
+echo This will help you set up your Netlify API credentials.
 echo.
 
 echo To get your Netlify API token:
@@ -26,12 +26,13 @@ set /p siteId="Enter your Netlify Site ID: "
 echo.
 echo Creating .env file...
 
-echo NETLIFY_API_TOKEN=%apiToken%> .env
+echo # Netlify API Configuration> .env
+echo NETLIFY_API_TOKEN=%apiToken%>> .env
 echo NETLIFY_SITE_ID=%siteId%>> .env
 
 echo.
-echo ✅ Netlify configuration saved to .env file!
+echo ✅ Environment configuration saved to .env file!
 echo.
-echo Now the script will automatically fetch subscribers from your Netlify forms.
+echo Now you can run: npm run sync-subscribers
 echo.
 pause 
