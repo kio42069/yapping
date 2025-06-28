@@ -80,15 +80,15 @@ const GiscusComments = () => {
       <Giscus
         id="comments"
         repo="kio42069/yapping"
-        repoId="R_kgDOLqQAAA"
+        repoId="R_kgDOPC7QwA"
         category="General"
-        categoryId="DIC_kwDOLqQAAc4CbQ"
+        categoryId="DIC_kwDOPC7QwM4CsKXr"
         mapping="pathname"
         strict="0"
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="bottom"
-        theme="light"
+        theme="catppuccin_frappe"
         lang="en"
         loading="lazy"
       />
