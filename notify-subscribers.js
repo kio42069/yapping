@@ -167,19 +167,169 @@ function setLastSentSlug(slug) {
 // Create email HTML
 function createEmailHTML(post) {
   return `
-  <body style="background: linear-gradient(45deg, #e6f3ff, #b3d4f7, #f7fafc); font-family: 'VT323', monospace; color: #2d3748; padding: 40px;">
-    <div style="max-width: 700px; margin: 0 auto; background: white; border: 2px solid #4a90e2; border-radius: 15px; box-shadow: 0 0 20px rgba(74, 144, 226, 0.2); padding: 30px;">
-      <h1 style="color: #2c5282; font-size: 2.5rem; letter-spacing: 2px;">${post.title}</h1>
-      <div style="color: #718096; font-size: 1rem; margin-bottom: 20px;">${post.date}</div>
-      <div style="margin-bottom: 30px;">
-        ${(post.tags || []).map(tag => `<span style='display:inline-block;background:#b3d4f7;color:#2c5282;padding:4px 8px;border-radius:10px;font-size:0.8rem;margin-right:8px;margin-bottom:5px;'>#${tag}</span>`).join(' ')}
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Blog Post: ${post.title}</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/generale-station" type="text/css"/>
+    <style>
+      body {
+        font-family: 'GeneraleStation', monospace !important;
+        background: linear-gradient(45deg, #e6f3ff, #b3d4f7, #f7fafc);
+        margin: 0;
+        padding: 20px;
+        color: #2d3748;
+        line-height: 1.6;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        border: 2px solid #4a90e2;
+        border-radius: 12px;
+        box-shadow: 0 0 16px rgba(74, 144, 226, 0.2);
+        padding: 24px;
+        font-family: 'GeneraleStation', monospace !important;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #b3d4f7;
+      }
+      .title {
+        color: #2c5282;
+        font-size: 2rem;
+        letter-spacing: 1.6px;
+        margin: 0 0 8px 0;
+        font-family: 'GeneraleStation', monospace !important;
+      }
+      .date {
+        color: #718096;
+        font-size: 0.8rem;
+        margin-bottom: 16px;
+        font-family: 'GeneraleStation', monospace !important;
+      }
+      .tags {
+        margin-bottom: 24px;
+      }
+      .tag {
+        display: inline-block;
+        background: #b3d4f7;
+        color: #2c5282;
+        padding: 3px 6px;
+        border-radius: 8px;
+        font-size: 0.6rem;
+        margin-right: 6px;
+        margin-bottom: 4px;
+        font-family: 'GeneraleStation', monospace !important;
+      }
+      .content {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 32px;
+        font-family: 'GeneraleStation', monospace !important;
+      }
+      .content h1, .content h2, .content h3 {
+        color: #2c5282;
+        font-family: 'GeneraleStation', monospace !important;
+      }
+      .content h1 { font-size: 1.6rem; letter-spacing: 1.2px; }
+      .content h2 { font-size: 1.4rem; letter-spacing: 1px; }
+      .content h3 { font-size: 1.2rem; letter-spacing: 0.8px; }
+      .content p { margin-bottom: 12px; }
+      .content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin: 16px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .content code {
+        background: #f7fafc;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-family: 'GeneraleStation', monospace !important;
+        font-size: 0.9em;
+      }
+      .content pre {
+        background: #f7fafc;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;
+        border: 1px solid #e2e8f0;
+        margin: 16px 0;
+      }
+      .content blockquote {
+        border-left: 3px solid #4a90e2;
+        padding-left: 16px;
+        margin: 16px 0;
+        font-style: italic;
+        color: #666;
+      }
+      .content a {
+        color: #4a90e2;
+        text-decoration: none;
+        border-bottom: 1px solid #4a90e2;
+      }
+      .cta-button {
+        text-align: center;
+        margin-top: 32px;
+      }
+      .cta-button a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #4a90e2;
+        color: white;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-family: 'GeneraleStation', monospace !important;
+        letter-spacing: 0.5px;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e2e8f0;
+        color: #718096;
+        font-size: 0.7rem;
+        font-family: 'GeneraleStation', monospace !important;
+      }
+      @media (max-width: 600px) {
+        body { padding: 10px; }
+        .email-container { padding: 16px; }
+        .title { font-size: 1.6rem; }
+        .content { font-size: 0.9rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <h1 class="title">${post.title}</h1>
+        <div class="date">${post.date}</div>
+        <div class="tags">
+          ${(post.tags || []).map(tag => `<span class="tag">#${tag}</span>`).join('')}
+        </div>
       </div>
-      <div style="font-size: 1.2rem; line-height: 1.7;">${post.html}</div>
-      <div style="margin-top: 40px; text-align: center;">
-        <a href="https://your-site.netlify.app/blog/${post.slug}" style="display:inline-block;padding:12px 24px;background:#4a90e2;color:white;border-radius:15px;text-decoration:none;font-size:1.1rem;">Read on the site →</a>
+      
+      <div class="content">
+        ${post.html}
+      </div>
+      
+      <div class="cta-button">
+        <a href="https://your-site.netlify.app/blog/${post.slug}">Read on the site →</a>
+      </div>
+      
+      <div class="footer">
+        You're receiving this because you subscribed to blog updates.
       </div>
     </div>
   </body>
+  </html>
   `;
 }
 

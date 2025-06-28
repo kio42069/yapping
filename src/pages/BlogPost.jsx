@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
-import Giscus from '../components/Giscus'
+import GiscusComments from '../components/Giscus'
 import { getBlogPost } from '../utils/blogUtils'
 
 const BlogPost = () => {
@@ -91,8 +91,82 @@ const BlogPost = () => {
             h3: ({children}) => <h4 style={{ color: '#4a90e2', marginTop: '25px', marginBottom: '10px' }}>{children}</h4>,
             p: ({children}) => <p style={{ marginBottom: '15px' }}>{children}</p>,
             ul: ({children}) => <ul style={{ paddingLeft: '20px', marginBottom: '15px' }}>{children}</ul>,
+            ol: ({children}) => <ol style={{ paddingLeft: '20px', marginBottom: '15px' }}>{children}</ol>,
+            li: ({children}) => <li style={{ marginBottom: '5px' }}>{children}</li>,
             strong: ({children}) => <strong style={{ color: '#2c5282' }}>{children}</strong>,
-            em: ({children}) => <em style={{ color: '#4a90e2' }}>{children}</em>
+            em: ({children}) => <em style={{ color: '#4a90e2' }}>{children}</em>,
+            blockquote: ({children}) => (
+              <blockquote style={{
+                borderLeft: '4px solid #4a90e2',
+                paddingLeft: '20px',
+                margin: '20px 0',
+                fontStyle: 'italic',
+                color: '#666'
+              }}>
+                {children}
+              </blockquote>
+            ),
+            code: ({children, className}) => {
+              if (className) {
+                // Code block
+                return (
+                  <pre style={{
+                    background: '#f7fafc',
+                    padding: '15px',
+                    borderRadius: '8px',
+                    overflow: 'auto',
+                    border: '1px solid #e2e8f0',
+                    margin: '20px 0'
+                  }}>
+                    <code>{children}</code>
+                  </pre>
+                )
+              }
+              // Inline code
+              return (
+                <code style={{
+                  background: '#f7fafc',
+                  padding: '2px 6px',
+                  borderRadius: '4px',
+                  fontFamily: 'monospace',
+                  fontSize: '0.9em'
+                }}>
+                  {children}
+                </code>
+              )
+            },
+            img: ({src, alt}) => (
+              <img 
+                src={src} 
+                alt={alt || 'Blog image'} 
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                  borderRadius: '8px',
+                  margin: '20px 0',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                  display: 'block'
+                }}
+                onError={(e) => {
+                  console.error('Failed to load image:', src)
+                  e.target.style.display = 'none'
+                }}
+              />
+            ),
+            a: ({href, children}) => (
+              <a 
+                href={href} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  color: '#4a90e2',
+                  textDecoration: 'none',
+                  borderBottom: '1px solid #4a90e2'
+                }}
+              >
+                {children}
+              </a>
+            )
           }}
         >
           {post.content}
@@ -103,7 +177,7 @@ const BlogPost = () => {
         ──────────────────────────────────────────────────────
       </div>
       
-      <Giscus />
+      <GiscusComments />
     </div>
   )
 }

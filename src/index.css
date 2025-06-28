@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  font-family: "VT323", monospace;
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   font-style: normal;
   background: linear-gradient(135deg, var(--light-blue), var(--secondary-blue), var(--light-gray));
@@ -42,7 +42,7 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   min-height: 100vh;
-  font-size: 18px; /* Slightly larger for VT323 readability */
+  font-size: 18px; /* Slightly larger for Generale Station readability */
 }
 
 @keyframes gradientShift {
@@ -57,32 +57,35 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
   line-height: 1.2;
   color: var(--accent-blue);
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 p {
   margin-bottom: 1em;
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 a {
   color: var(--primary-blue);
   text-decoration: none;
   transition: color 0.3s ease;
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 a:hover {
   color: var(--accent-blue);
 }
 
-/* VT323 Font Application */
+/* Generale Station Font Application */
 h1, h2, h3, h4, h5, h6, 
 input, button, textarea, select,
-.vt323-regular {
-  font-family: "VT323", monospace;
+.generale-station {
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   font-style: normal;
 }
 
-/* Typography adjustments for VT323 */
+/* Typography adjustments for Generale Station */
 h1 {
   font-size: 2.5rem;
   letter-spacing: 2px;
@@ -101,6 +104,11 @@ h3 {
 /* Button and input adjustments */
 button {
   letter-spacing: 0.5px;
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+}
+
+input, textarea, select {
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 /* Utility Classes */

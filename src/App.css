@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "VT323", monospace;
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   font-style: normal;
   background: linear-gradient(45deg, #e6f3ff, #b3d4f7, #f7fafc);
@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 20px;
   line-height: 1.5;
-  font-size: 18px; /* Slightly larger for better readability with VT323 */
+  font-size: 18px; /* Slightly larger for better readability with Generale Station */
 }
 
 @keyframes gradientShift {
@@ -44,7 +44,7 @@ body {
   margin: 0;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-size: 3rem; /* Slightly larger for VT323 */
+  font-size: 3rem; /* Slightly larger for Generale Station */
   letter-spacing: 2px;
 }
 
@@ -369,22 +369,22 @@ body {
   margin-left: 5px;
 }
 
-/* VT323 Font Utility */
-.vt323-regular {
-  font-family: "VT323", monospace;
+/* Generale Station Font Utility */
+.generale-station {
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   font-style: normal;
 }
 
-/* Ensure all elements use VT323 */
+/* Ensure all elements use Generale Station */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "VT323", monospace;
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
 }
 
-/* Specific adjustments for VT323 readability */
+/* Specific adjustments for Generale Station readability */
 .header h1 {
-  font-size: 3rem; /* Slightly larger for VT323 */
+  font-size: 3rem; /* Slightly larger for Generale Station */
   letter-spacing: 2px;
 }
 
@@ -395,13 +395,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Input and button font consistency */
 input, button, textarea {
-  font-family: "VT323", monospace;
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-size: 16px;
 }
 
-/* Code and pre elements should stay monospace but use VT323 */
+/* Code and pre elements should stay monospace but use Generale Station */
 code, pre {
-  font-family: "VT323", monospace;
+  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 /* Responsive Music Player */
@@ -433,7 +433,7 @@ code, pre {
   }
   
   .current-track {
-    display: none; /* Hide track name on very small screens */
+    display: none;
   }
 }
 
@@ -445,7 +445,7 @@ code, pre {
   
   .App {
     border-radius: 10px;
-    margin-top: 70px; /* Adjust for smaller music player */
+    margin-top: 70px;
   }
   
   .header h1 {
@@ -475,6 +475,6 @@ code, pre {
 
 @media (max-width: 480px) {
   .App {
-    margin-top: 20px; /* Music player becomes relative positioned */
+    margin-top: 20px;
   }
 }

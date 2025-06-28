@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chmeese</title>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!-- Font Library - Generale Station -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/generale-station" type="text/css"/>
+    
+    <!-- Fallback font loading -->
+    <style>
+      @import url('https://fontlibrary.org//face/generale-station');
+      
+      /* Fallback to ensure font loads */
+      body {
+        font-family: 'GeneraleStation', 'Courier New', monospace;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

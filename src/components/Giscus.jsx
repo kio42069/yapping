@@ -1,40 +1,7 @@
 import React from 'react'
+import Giscus from '@giscus/react'
 
-const Giscus = ({ repoId, categoryId }) => {
-  React.useEffect(() => {
-    // Create script element for Giscus
-    const script = document.createElement('script')
-    script.src = 'https://giscus.app/client.js'
-    script.setAttribute('data-repo', 'YOUR_USERNAME/YOUR_REPO') // Replace with actual repo
-    script.setAttribute('data-repo-id', repoId || 'YOUR_REPO_ID')
-    script.setAttribute('data-category', 'General')
-    script.setAttribute('data-category-id', categoryId || 'YOUR_CATEGORY_ID')
-    script.setAttribute('data-mapping', 'pathname')
-    script.setAttribute('data-strict', '0')
-    script.setAttribute('data-reactions-enabled', '1')
-    script.setAttribute('data-emit-metadata', '0')
-    script.setAttribute('data-input-position', 'bottom')
-    script.setAttribute('data-theme', 'light')
-    script.setAttribute('data-lang', 'en')
-    script.crossOrigin = 'anonymous'
-    script.async = true
-    
-    // Add to comments container
-    const commentsContainer = document.getElementById('giscus-container')
-    if (commentsContainer) {
-      // Clear existing comments
-      commentsContainer.innerHTML = ''
-      commentsContainer.appendChild(script)
-    }
-    
-    return () => {
-      // Cleanup
-      if (commentsContainer) {
-        commentsContainer.innerHTML = ''
-      }
-    }
-  }, [repoId, categoryId])
-  
+const GiscusComments = () => {
   return (
     <div className="comments-section">
       <h3 style={{ color: '#4a90e2', textAlign: 'center', marginBottom: '20px' }}>
@@ -43,9 +10,23 @@ const Giscus = ({ repoId, categoryId }) => {
       <p style={{ textAlign: 'center', color: '#718096', marginBottom: '20px' }}>
         Share your thoughts! Comments are powered by GitHub Discussions
       </p>
-      <div id="giscus-container"></div>
+      <Giscus
+        id="comments"
+        repo="kio42069/yapping"
+        repoId="R_kgDOLqQAAA"
+        category="General"
+        categoryId="DIC_kwDOLqQAAc4CbQ"
+        mapping="pathname"
+        strict="0"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="bottom"
+        theme="light"
+        lang="en"
+        loading="lazy"
+      />
     </div>
   )
 }
 
-export default Giscus
+export default GiscusComments
