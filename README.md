@@ -72,8 +72,47 @@ add-music-folder.bat "C:\path\to\your\music\folder"
 ## Blog Posts
 Add Markdown files to the `blog/` directory.
 
-## Comments
-Comments are powered by Giscus (GitHub Discussions).
+## Comments Setup
+
+Comments are powered by [Giscus](https://giscus.app/) (GitHub Discussions).
+
+### Setting Up Giscus
+
+1. **Public Repository Required**
+   - Make sure your GitHub repository is public
+   - Private repositories limit comments only to collaborators
+
+2. **Install the Giscus GitHub App**
+   - Go to [github.com/apps/giscus](https://github.com/apps/giscus)
+   - Click "Install"
+   - Select the repository where you want to enable discussions
+
+3. **Enable Discussions in Repository**
+   - Go to your GitHub repository
+   - Click "Settings" tab
+   - Scroll down to "Features" section
+   - Check the box for "Discussions"
+
+4. **Get Your Giscus Configuration**
+   - Visit [giscus.app](https://giscus.app/)
+   - Enter your repository information
+   - Select "Discussion mapping" (recommend "pathname")
+   - Choose a discussion category (usually "Announcements")
+   - Copy the generated configuration
+
+5. **Set Environment Variables**
+   - Create a `.env` file based on `.env.template` 
+   - Add your Giscus configuration values:
+   ```
+   VITE_GISCUS_REPO=your-username/blogger2
+   VITE_GISCUS_REPO_ID=YOUR_REPO_ID  
+   VITE_GISCUS_CATEGORY=Announcements
+   VITE_GISCUS_CATEGORY_ID=YOUR_CATEGORY_ID
+   ```
+
+6. **Netlify Environment Variables**
+   - Add the same variables to your Netlify site settings
+   - Go to Site settings → Environment variables
 
 ## Subscriptions
 Email subscription ready for Mailchimp/Buttondown integration.

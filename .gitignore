@@ -28,6 +28,7 @@ email-config.json
 .env
 last-sent.txt
 subscribers.json
+notify-subscribers.js
 
 # Setup scripts (optional - can be removed if you prefer)
 setup-env.bat

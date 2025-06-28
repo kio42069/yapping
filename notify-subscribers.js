@@ -30,8 +30,8 @@ const EMAIL_CONFIG = {
   port: 587,
   secure: false, // true for 465, false for other ports
   auth: {
-    user: process.env.EMAIL_USER || getEmailFromConfig() || 'your-email@gmail.com',
-    pass: process.env.EMAIL_PASS || getPasswordFromConfig() || 'your-app-password' // Use app password for Gmail
+    user: 'surat22517@iiitd.ac.in',
+    pass: 'fnne uump xnit rpko' // Use app password for Gmail
   }
 };
 
