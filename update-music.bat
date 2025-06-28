@@ -1,0 +1,6 @@
+@echo off
+echo Updating music list...
+powershell -ExecutionPolicy Bypass -File "%~dp0update-music.ps1"
+echo.
+echo Press any key to exit...
+pause > nul

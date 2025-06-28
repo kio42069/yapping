@@ -9,44 +9,41 @@ const MusicPlayer = () => {
   const audioRef = useRef(null)
 
   // List of music files - update this array when you add new tracks
-  const musicFiles = [
-    '/music/track1.mp3',
-    '/music/track2.mp3',
-    '/music/track3.mp3',
-    '/music/ambient1.mp3',
-    '/music/chill1.mp3',    '/music/[1 hour version] wii party ~ nintendo lo-fi [GpkUkMWF-1g].mp3',    '/music/',    '/music/Bury the Light.mp3',    '/music/cavetown ?? devil town.mp3',    '/music/Clairo - Pretty Girl [mngtcfcaVrI].mp3',    '/music/',    '/music/Come Inside Of My Heart.mp3',    '/music/creep by radiohead [sTaamHdDVQE].mp3',    '/music/Devil Town V.2.mp3',    '/music/feelings are fatal.mp3',    '/music/Get Lucky [Original Version] - Daft Punk.mp3',    '/music/heather - Conan Gray ?? cover acoustic version ?? [7NL9b054Fek].mp3',    '/music/Here With Me.mp3',    '/music/Just the Two of Us [kinUc7TVBNg].mp3',    '/music/Kavinsky - Nightcall.mp3',    '/music/lain sings u duvet [ATd59_wqSJA].mp3',    '/music/Lovefool - The Cardigans.mp3',    '/music/LUM!X - Monster.mp3',    '/music/Marvin Gaye ft. Wale [Remix].mp3',    '/music/NEFFEX - Grateful [Copyright Free].mp3',    '/music/Ocean Eyes.mp3',    '/music/ONLY.mp3',    '/music/Renai Circulation ???????????????????*?????.mp3',    '/music/rises the moon.mp3',    '/music/Romantic Homicide COVER [ArdfAdDWN1Q].mp3',    '/music/Summertime Cinnamons.mp3',    '/music/Summertime - Cinnamons X Evening Cinema.mp3',    '/music/Tek It.mp3',    '/music/Tip Toe - HYBS.mp3',    '/music/Vicetone - Nevada - Ft - Cozi - Zuehlsdorff- 22.mp3',    '/music/Wiz Khalifa - See You Again ft. Charlie Puth Furious 7 Soundtrack.mp3',
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // Add your actual music files here
+    const musicFiles = [
+    '/music/bbno$ & Y2K - lalala.mp3',
+    '/music/Bury the Light.mp3',
+    '/music/cavetown ?? devil town.mp3',
+    '/music/Clairo - Pretty Girl [mngtcfcaVrI].mp3',
+    '/music/Clarx & Harddope - Castle [NCS Release].mp3',
+    '/music/clich�.mp3',
+    '/music/Come Inside Of My Heart.mp3',
+    '/music/creep by radiohead [sTaamHdDVQE].mp3',
+    '/music/Devil Town V.2.mp3',
+    '/music/feelings are fatal.mp3',
+    '/music/Get Lucky [Original Version] - Daft Punk.mp3',
+    '/music/heather - Conan Gray ?? cover acoustic version ?? [7NL9b054Fek].mp3',
+    '/music/Here With Me.mp3',
+    '/music/Just the Two of Us [kinUc7TVBNg].mp3',
+    '/music/Kavinsky - Nightcall.mp3',
+    '/music/lain sings u duvet [ATd59_wqSJA].mp3',
+    '/music/Lovefool - The Cardigans.mp3',
+    '/music/LUM!X - Monster.mp3',
+    '/music/Marvin Gaye ft. Wale [Remix].mp3',
+    '/music/NEFFEX - Grateful [Copyright Free].mp3',
+    '/music/Neon Genesis Evangelion OP - A Cruel Angel\'s Thesis.mp3',
+    '/music/Ocean Eyes.mp3',
+    '/music/ONLY.mp3',
+    '/music/Renai Circulation ???????????????????*?????.mp3',
+    '/music/rises the moon.mp3',
+    '/music/Romantic Homicide COVER [ArdfAdDWN1Q].mp3',
+    '/music/Summertime - Cinnamons X Evening Cinema.mp3',
+    '/music/Summertime Cinnamons.mp3',
+    '/music/Tek It.mp3',
+    '/music/Tip Toe - HYBS.mp3',
+    '/music/Vicetone - Nevada - Ft - Cozi - Zuehlsdorff- 22.mp3',
+    '/music/We Don\'t Talk Anymore Edit.mp3',
+    '/music/Wiz Khalifa - See You Again ft. Charlie Puth Furious 7 Soundtrack.mp3',
+    '/music/[1 hour version] wii party ~ nintendo lo-fi [GpkUkMWF-1g].mp3',
   ]
 
   useEffect(() => {
@@ -184,3 +181,5 @@ const MusicPlayer = () => {
 }
 
 export default MusicPlayer
+
+
