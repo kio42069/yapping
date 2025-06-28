@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+/* Font Face Declaration */
+@font-face {
+  font-family: 'RufScript';
+  src: url('./assets/Rufscript010.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Custom CSS Variables */
 :root {
   --primary-blue: #4a90e2;
@@ -31,7 +40,7 @@ html {
 }
 
 body {
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   font-style: normal;
   background: linear-gradient(135deg, var(--light-blue), var(--secondary-blue), var(--light-gray));
@@ -42,7 +51,7 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   min-height: 100vh;
-  font-size: 18px; /* Slightly larger for Generale Station readability */
+  font-size: 18px; /* Slightly larger for RufScript readability */
 }
 
 @keyframes gradientShift {
@@ -57,35 +66,35 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
   line-height: 1.2;
   color: var(--accent-blue);
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 p {
   margin-bottom: 1em;
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 a {
   color: var(--primary-blue);
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 a:hover {
   color: var(--accent-blue);
 }
 
-/* Generale Station Font Application */
+/* RufScript Font Application */
 h1, h2, h3, h4, h5, h6, 
 input, button, textarea, select,
-.generale-station {
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+.rufscript {
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   font-style: normal;
 }
 
-/* Typography adjustments for Generale Station */
+/* Typography adjustments for RufScript */
 h1 {
   font-size: 2.5rem;
   letter-spacing: 2px;
@@ -104,11 +113,11 @@ h3 {
 /* Button and input adjustments */
 button {
   letter-spacing: 0.5px;
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 input, textarea, select {
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 /* Utility Classes */

@@ -173,10 +173,10 @@ function createEmailHTML(post) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Blog Post: ${post.title}</title>
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/generale-station" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/retep-relleum" type="text/css"/>
     <style>
       body {
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
         background: linear-gradient(45deg, #e6f3ff, #b3d4f7, #f7fafc);
         margin: 0;
         padding: 20px;
@@ -191,7 +191,7 @@ function createEmailHTML(post) {
         border-radius: 12px;
         box-shadow: 0 0 16px rgba(74, 144, 226, 0.2);
         padding: 24px;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
       }
       .header {
         text-align: center;
@@ -204,13 +204,13 @@ function createEmailHTML(post) {
         font-size: 2rem;
         letter-spacing: 1.6px;
         margin: 0 0 8px 0;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
       }
       .date {
         color: #718096;
         font-size: 0.8rem;
         margin-bottom: 16px;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
       }
       .tags {
         margin-bottom: 24px;
@@ -224,17 +224,17 @@ function createEmailHTML(post) {
         font-size: 0.6rem;
         margin-right: 6px;
         margin-bottom: 4px;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
       }
       .content {
         font-size: 1rem;
         line-height: 1.7;
         margin-bottom: 32px;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
       }
       .content h1, .content h2, .content h3 {
         color: #2c5282;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
       }
       .content h1 { font-size: 1.6rem; letter-spacing: 1.2px; }
       .content h2 { font-size: 1.4rem; letter-spacing: 1px; }
@@ -251,7 +251,7 @@ function createEmailHTML(post) {
         background: #f7fafc;
         padding: 2px 4px;
         border-radius: 3px;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
         font-size: 0.9em;
       }
       .content pre {
@@ -286,7 +286,7 @@ function createEmailHTML(post) {
         border-radius: 12px;
         text-decoration: none;
         font-size: 0.9rem;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
         letter-spacing: 0.5px;
       }
       .footer {
@@ -296,7 +296,7 @@ function createEmailHTML(post) {
         border-top: 1px solid #e2e8f0;
         color: #718096;
         font-size: 0.7rem;
-        font-family: 'GeneraleStation', monospace !important;
+        font-family: 'RetepRelleum', monospace !important;
       }
       @media (max-width: 600px) {
         body { padding: 10px; }

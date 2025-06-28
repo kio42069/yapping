@@ -139,7 +139,7 @@ const BlogPost = () => {
                   background: '#f7fafc',
                   padding: '2px 6px',
                   borderRadius: '4px',
-                  fontFamily: 'monospace',
+                  fontFamily: 'RufScript, Courier New, monospace',
                   fontSize: '0.9em'
                 }}>
                   {children}
@@ -241,7 +241,7 @@ const BlogPost = () => {
             borderRadius: '5px',
             cursor: 'pointer',
             fontSize: '0.8rem',
-            fontFamily: 'GeneraleStation, Courier New, monospace'
+            fontFamily: 'RufScript, Courier New, monospace'
           }}
         >
           {useSimpleComments ? 'Switch to Giscus Comments' : 'Switch to Simple Comments'}

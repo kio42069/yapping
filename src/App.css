@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   font-style: normal;
   background: linear-gradient(45deg, #e6f3ff, #b3d4f7, #f7fafc);
@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 20px;
   line-height: 1.5;
-  font-size: 18px; /* Slightly larger for better readability with Generale Station */
+  font-size: 18px; /* Slightly larger for better readability with RufScript */
 }
 
 @keyframes gradientShift {
@@ -44,7 +44,7 @@ body {
   margin: 0;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-size: 3rem; /* Slightly larger for Generale Station */
+  font-size: 3rem; /* Slightly larger for RufScript */
   letter-spacing: 2px;
 }
 
@@ -369,22 +369,22 @@ body {
   margin-left: 5px;
 }
 
-/* Generale Station Font Utility */
-.generale-station {
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+/* RufScript Font Utility */
+.rufscript {
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   font-style: normal;
 }
 
-/* Ensure all elements use Generale Station */
+/* Ensure all elements use RufScript */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
 }
 
-/* Specific adjustments for Generale Station readability */
+/* Specific adjustments for RufScript readability */
 .header h1 {
-  font-size: 3rem; /* Slightly larger for Generale Station */
+  font-size: 3rem; /* Slightly larger for RufScript */
   letter-spacing: 2px;
 }
 
@@ -395,13 +395,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Input and button font consistency */
 input, button, textarea {
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
   font-size: 16px;
 }
 
-/* Code and pre elements should stay monospace but use Generale Station */
+/* Code and pre elements should stay monospace but use RufScript */
 code, pre {
-  font-family: 'GeneraleStation', 'Courier New', 'Consolas', 'Monaco', monospace;
+  font-family: 'RufScript', 'Courier New', 'Consolas', 'Monaco', monospace;
 }
 
 /* Responsive Music Player */

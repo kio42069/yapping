@@ -55,7 +55,7 @@ const SimpleComments = () => {
                 padding: '8px',
                 border: '1px solid #e2e8f0',
                 borderRadius: '5px',
-                fontFamily: 'GeneraleStation, Courier New, monospace'
+                fontFamily: 'RufScript, Courier New, monospace'
               }}
               required
             />
@@ -74,7 +74,7 @@ const SimpleComments = () => {
                 borderRadius: '5px',
                 minHeight: '80px',
                 resize: 'vertical',
-                fontFamily: 'GeneraleStation, Courier New, monospace'
+                fontFamily: 'RufScript, Courier New, monospace'
               }}
               required
             />
@@ -88,7 +88,7 @@ const SimpleComments = () => {
               padding: '8px 16px',
               borderRadius: '5px',
               cursor: 'pointer',
-              fontFamily: 'GeneraleStation, Courier New, monospace'
+              fontFamily: 'RufScript, Courier New, monospace'
             }}
           >
             Post Comment
