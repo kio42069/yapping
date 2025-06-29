@@ -3,6 +3,7 @@ title: "wattpad lore"
 date: "2025-06-29"
 tags: ["thoughts"]
 excerpt: "this post should ideally have taken me a week but i'm probably gonna no life it..."
+music: "ONLY.mp3"
 ---
 
 # nostalgia
