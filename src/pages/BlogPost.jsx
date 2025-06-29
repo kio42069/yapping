@@ -4,12 +4,14 @@ import ReactMarkdown from 'react-markdown'
 import GiscusComments from '../components/Giscus'
 import SimpleComments from '../components/SimpleComments'
 import { getBlogPost } from '../utils/blogUtils'
+import { useMusic } from '../utils/MusicContext.jsx'
 
 const BlogPost = () => {
   const { slug } = useParams()
   const [post, setPost] = useState(null)
   const [loading, setLoading] = useState(true)
   const [useSimpleComments, setUseSimpleComments] = useState(false)
+  const { setCustomTrack } = useMusic()
   
   useEffect(() => {
     const loadPost = async () => {
@@ -17,16 +19,29 @@ const BlogPost = () => {
       try {
         const postData = await getBlogPost(slug)
         setPost(postData)
+        
+        // If the post has a custom music track specified, set it
+        if (postData?.music) {
+          console.log(`Setting custom music track: ${postData.music}`)
+          setCustomTrack(postData.music)
+        } else {
+          // Reset to random music if no custom track
+          setCustomTrack(null)
+        }
       } catch (error) {
         console.error('Error loading post:', error)
         setPost(null)
+        setCustomTrack(null)
       } finally {
         setLoading(false)
       }
     }
     
     loadPost()
-  }, [slug])
+    
+    // Reset custom track when unmounting
+    return () => setCustomTrack(null)
+  }, [slug, setCustomTrack])
   
   if (loading) {
     return (

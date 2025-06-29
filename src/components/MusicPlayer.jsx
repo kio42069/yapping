@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-const MusicPlayer = () => {
+const MusicPlayer = ({ customTrack }) => {
   const [currentTrack, setCurrentTrack] = useState(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(false)
   const [tracks, setTracks] = useState([])
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
   const audioRef = useRef(null)
+  const [isCustomTrack, setIsCustomTrack] = useState(false)
 
   // List of music files - update this array when you add new tracks
     const musicFiles = [
@@ -54,10 +55,35 @@ const MusicPlayer = () => {
     })
     
     setTracks(availableTracks)
-    if (availableTracks.length > 0) {
-      playRandomTrack(availableTracks)
+    
+    // If a custom track is specified, use it instead of a random track
+    if (customTrack) {
+      const trackPath = `/music/${customTrack}`;
+      console.log('Using custom track for this post:', trackPath);
+      setCurrentTrack(trackPath);
+      setIsCustomTrack(true);
+      
+      if (audioRef.current) {
+        audioRef.current.src = trackPath;
+        audioRef.current.load();
+        
+        // Auto-play with user interaction handling
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              setIsPlaying(true);
+            })
+            .catch(error => {
+              console.log('Auto-play prevented by browser. User interaction required.');
+              setIsPlaying(false);
+            });
+        }
+      }
+    } else if (availableTracks.length > 0) {
+      playRandomTrack(availableTracks);
     }
-  }, [])
+  }, [customTrack])
 
   const playRandomTrack = (trackList = tracks) => {
     if (trackList.length === 0) return
@@ -94,11 +120,20 @@ const MusicPlayer = () => {
   }
 
   const handleShuffle = () => {
+    setIsCustomTrack(false) // Exit custom track mode
     playRandomTrack()
   }
 
   const handleTrackEnd = () => {
-    playRandomTrack() // Auto-play next random track when current ends
+    if (isCustomTrack) {
+      // If it was a custom track that ended, just replay it
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0
+        audioRef.current.play()
+      }
+    } else {
+      playRandomTrack() // Auto-play next random track when current ends
+    }
   }
 
   const handlePlayPause = () => {

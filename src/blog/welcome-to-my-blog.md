@@ -3,6 +3,7 @@ title: "Hello bacchon"
 date: "2025-06-26"
 tags: ["welcome", "hi"]
 excerpt: "Why this goofy ass blog and not any well developed social media like oh maybe instagram or twitter..."
+music: "Neon Genesis Evangelion OP - A Cruel Angel's Thesis.mp3"
 ---
 
 # why

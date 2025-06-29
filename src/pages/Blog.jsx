@@ -35,7 +35,7 @@ const Blog = () => {
       <div className="welcome-section">
         <h2>📝 my blog posts</h2>
         <p style={{ color: '#666', textAlign: 'center' }}>
-          welcome to my little writing corner! ♡
+          slowly going insane :3
         </p>
       </div>
       
@@ -95,3 +95,5 @@ const Blog = () => {
 }
 
 export default Blog
+
+

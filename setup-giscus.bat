@@ -1,3 +1,0 @@
-@echo off
-echo Setting up Giscus comments...
-powershell -ExecutionPolicy Bypass -File "%~dp0setup-giscus.ps1"

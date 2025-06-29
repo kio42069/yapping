@@ -3,6 +3,7 @@ title: "cooked some fun food today (feat. mom)"
 date: "2025-06-28"
 tags: ["food"]
 excerpt: "made some crispy golden corn and tofu x paneer gravy with chinese style fried rice ‼"
+music: "Get Lucky [Original Version] - Daft Punk.mp3"
 ---
 
 # dinnah
