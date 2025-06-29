@@ -6,7 +6,6 @@ excerpt: "this post should ideally have taken me a week but i'm probably gonna n
 ---
 
 # nostalgia
-webnovel contacted me
 I used to have a wattpad back in 2018-2020. The plan was to write a fictional, superhero, sci-fi trilogy kind of in the YA genre.
 
 I had massive plans for the trilogy
