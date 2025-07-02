@@ -10,9 +10,9 @@ music: "ONLY.mp3"
 I used to have a wattpad back in 2018-2020. The plan was to write a fictional, superhero, sci-fi trilogy kind of in the YA genre.
 
 I had massive plans for the trilogy
-- The Datraw Chronicles
-- The Legendary Solars
-- The Rise of A.L.P.H.A
+- [The Datraw Chronicles](#the-datraw-chronicles)
+- [The Legendary Solars](#the-legendary-solars)
+- [The Rise of A.L.P.H.A](#the-rise-of-alpha)
 
 ### The Datraw Chronicles
 
@@ -69,7 +69,7 @@ I once again, found a local document lying around with a few of the old chapters
 
 [the legendary solars](https://kiddofour.netlify.app/images/solars.pdf)
 
-# The Rise of A.L.P.H.A
+# The Rise of ALPHA
 
 I don't remember a large chunk of this story, but it starts off with the 6 or 7 kids of the original group from the last book in various different parts of the Earth.
 
